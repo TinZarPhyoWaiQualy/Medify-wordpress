@@ -10,51 +10,37 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+ <main>
+      <section class="error-section">
+        <div class="error">
+          <div class="inner-error">
+            <h2 class="error-h2 error-header">Error Page</h2>
+            <div class="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="<?php echo home_url(); ?>/">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Error 404
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
 
-		<section class="error-404 not-found">
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'medify' ); ?></h1>
-			</header><!-- .page-header -->
+      <div class="error-wrapper">
+        <img
+          src="https://wgl-dsites.net/medify/wp-content/themes/medify/img/404.png"
+          alt="404"
+          class="error-img"
+        />
 
-			<div class="page-content">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'medify' ); ?></p>
-
-					<?php
-					get_search_form();
-
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'medify' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories(
-								array(
-									'orderby'    => 'count',
-									'order'      => 'DESC',
-									'show_count' => 1,
-									'title_li'   => '',
-									'number'     => 10,
-								)
-							);
-							?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$medify_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'medify' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$medify_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-			</div><!-- .page-content -->
-		</section><!-- .error-404 -->
-
-	</main><!-- #main -->
+        <h3 class="error-ttl">Sorry We Can't Find That Page!</h3>
+        <p class="error-content">
+          The page you are looking for was moved, removed, renamed or never
+          existed.
+        </p>
+      </div>
+    </main>
 
 <?php
 get_footer();
