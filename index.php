@@ -242,7 +242,7 @@ get_header();
             </div>
             <h3 class="care-a-h3 history-header">Why Choose Me?</h3>
             <div class="carea-lower-content">
-              <div class="lower-carea">
+              <div class="lower-carea top-lower-carea">
                 <h4 class="lower-carea-h4 active" data-target="quality">Quality</h4>
                 <h4 class="lower-carea-h4" data-target="reaction">Reaction</h4>
                 <h4 class="lower-carea-h4" data-target="focus">Focus</h4>
