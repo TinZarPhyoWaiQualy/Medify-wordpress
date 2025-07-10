@@ -655,6 +655,9 @@
         margin: 60px auto;
         gap: 30px;
     }
+    .top-our-media-wrapper {
+        padding-bottom: 20px;
+    }
 }
 
 /* top our team sp */

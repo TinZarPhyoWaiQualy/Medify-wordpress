@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Remove no-scroll
         document.body.classList.remove("no-scroll");
-         document.body.classList.remove("hide-header");
+        document.body.classList.remove("hide-header");
       });
     }
 
@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Remove no-scroll
         document.body.classList.remove("no-scroll");
-         document.body.classList.remove("hide-header");
+        document.body.classList.remove("hide-header");
       });
     }
 
@@ -138,20 +138,25 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Highlight current page link and parent submenu
-    const currentPath = window.location.pathname.split("/").pop();
+    let currentPath = window.location.pathname
+      .replace(/^\/|\/$/g, "") // remove leading/trailing slashes
+      .replace("index.html", "")
+      .replace("index", "")
+      .toLowerCase();
 
     sidebarLinks.forEach((link) => {
-      const linkPath = link.getAttribute("href");
-      if (
-        linkPath === currentPath ||
-        (linkPath === "index.html" && currentPath === "")
-      ) {
+      let linkPath = new URL(link.href, window.location.origin).pathname
+        .replace(/^\/|\/$/g, "")
+        .replace("index.html", "")
+        .replace("index", "")
+        .toLowerCase();
+
+      if (linkPath === currentPath) {
         link.classList.add("active");
 
-        // If it's a submenu link, also highlight the parent menu
         if (link.classList.contains("submenu-link")) {
-          submenuToggle.classList.add("active");
-          submenuArrow.classList.add("active");
+          submenuToggle?.classList.add("active");
+          submenuArrow?.classList.add("active");
         }
       } else {
         link.classList.remove("active");
