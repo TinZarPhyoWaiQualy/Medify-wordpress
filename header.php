@@ -64,7 +64,7 @@
 					<span id="closeSidebar" class="close-btn">&times;</span>
 				</div>
 				<nav class="sidebar-nav">
-					<a href="<?php echo home_url(); ?>/" id="homeLink" class="sidebar-link"> Home </a>
+					<a href="<?php echo home_url(); ?>/" class="sidebar-link"> Home </a>
 					<div class="sidebar-group">
 						<div id="submenuToggle" class="has-submenu">
 							<a href="#" class="parent-link">Pages <span id="submenuArrow" class="submenu-arrow"></span></a>
@@ -77,8 +77,8 @@
 							<a href="<?php echo home_url(); ?>/faq/" class="submenu-link">FAQ</a>
 						</div>
 					</div>
-					<a href="blog2column.html" id="homeLink" class="sidebar-link">Blog</a>
-					<a href="contacts.html" id="homeLink" class="sidebar-link">Contacts</a>
+					<a href="<?php echo home_url(); ?>/blog2column/" id="homeLink" class="sidebar-link">Blog</a>
+					<a href="<?php echo home_url(); ?>/contact/" id="homeLink" class="sidebar-link">Contacts</a>
 				</nav>
 			</div>
 			<div class="header-wrapper">
@@ -89,7 +89,7 @@
 							<div class="bar second-bar"></div>
 							<div class="bar third-bar"></div>
 						</div>
-						<a href="index.html">
+						<a href="<?php echo home_url(); ?>/">
 							<img
 								src="<?php bloginfo('template_directory'); ?>/assets/img/common/logo.png"
 								alt="logo"
