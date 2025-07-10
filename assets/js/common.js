@@ -286,16 +286,18 @@ $(function () {
       dots: false,
       responsive: [
         {
-          breakpoint: 768,
+          breakpoint: 769,
           settings: {
             arrows: false,
-            prevArrow: false,
-            nextArrow: false,
           },
         },
       ],
     });
   });
+
+  // $(window).on("load", function () {
+  //   $(".top-slider").slick("setPosition");
+  // });
   // top slider end
 
   //counter setup start faq
