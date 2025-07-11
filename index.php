@@ -238,7 +238,7 @@ get_header();
         <div class="inner-care-amenitie">
           <div class="care-a-content about-me-care">
             <div class="care-a">
-              <span>CARE&AMENITIES</span>
+              <span>CARE & AMENITIES</span>
             </div>
             <h3 class="care-a-h3 history-header">Why Choose Me?</h3>
             <div class="carea-lower-content">
