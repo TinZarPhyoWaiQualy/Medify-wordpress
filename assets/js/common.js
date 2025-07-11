@@ -268,6 +268,7 @@ $(function () {
       speed: 1000,
       fade: true,
       cssEase: "ease-in-out",
+      pauseOnHover: false,
       dots: false,
       responsive: [
         {
@@ -280,9 +281,6 @@ $(function () {
     });
   });
 
-  // $(window).on("load", function () {
-  //   $(".top-slider").slick("setPosition");
-  // });
   // top slider end
 
   //counter setup start faq
