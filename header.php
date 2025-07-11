@@ -58,7 +58,7 @@
 			<div class="sidebar" id="sidebar">
 				<div class="sidebar-header">
 					<img
-						src="<?php bloginfo('template_directory'); ?>/assets/img/common/medify-logo sp.png"
+						src="./assets/img/common/medify-logo sp.png"
 						alt="logo"
 						class="clinic-logo-sp-img" />
 					<span id="closeSidebar" class="close-btn">&times;</span>
