@@ -1041,7 +1041,7 @@ Background Color
 }
 
 .top-adv-service-wrapper {
-  background-image: url("../img/common/top-adv-bg.jpg");
+  background-image: url("https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/common/top-adv-bg.jpg");
   background-size: cover;
   background-attachment: fixed;
   padding-top: 20px;
@@ -1267,7 +1267,7 @@ Background Color
   left: -16px;
   width: 40px;
   height: 40px;
-  background-image: url("../img/common/counter-bg-2.png");
+  background-image: url("https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/common/counter-bg-2.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1294,7 +1294,7 @@ Background Color
   left: 18px;
   width: 40px;
   height: 40px;
-  background-image: url("../img/common/counter-bg-2.png");
+  background-image: url("https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/common/counter-bg-2.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1494,14 +1494,14 @@ Background Color
 
 /* call center blue bg fixed start */
 .call-center-section {
-  background: url(../img/common/call-center-bg.jpg) no-repeat;
+  background: url(https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/common/call-center-bg.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
   width: 100%;
 }
 
 .call-center-section.service-call-center {
-  background: url(../img/common/service-callcenter-bg.jpg) no-repeat;
+  background: url(https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/common/service-callcenter-bg.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
   width: 100%;
@@ -1570,7 +1570,7 @@ Background Color
 
 /* sidebar start */
 .widget-banner {
-  background-image: url("../img/common/widget-banner.jpg");
+  background-image: url("https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/common/widget-banner.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
