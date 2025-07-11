@@ -219,7 +219,7 @@ document.addEventListener("DOMContentLoaded", () => {
       baseImg.style.opacity = "0";
       targetY = -7;
       targetOpacity = 1;
-      easing = 0.05;
+      easing = 0.07;
       cancelAnimationFrame(animationFrame);
       animate();
     });
