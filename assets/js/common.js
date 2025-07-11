@@ -238,7 +238,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Your jQuery code goes here
 // ads slider start
 $(function () {
-  $(".logo-slider").slick({
+  $(".logo-slider-track").slick({
     slidesToShow: 6,
     slidesToScroll: 1,
     infinite: true,
@@ -250,26 +250,6 @@ $(function () {
     dots: false,
     pauseOnHover: false,
     variableWidth: true,
-    responsive: [
-      {
-        breakpoint: 1160,
-        settings: {
-          slidesToShow: 4,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 375,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
   });
   // ads slider end
 
@@ -285,7 +265,7 @@ $(function () {
       nextArrow: ".prev",
       autoplay: true,
       autoplaySpeed: 2000,
-      speed: 600,
+      speed: 1000,
       fade: true,
       cssEase: "ease-in-out",
       dots: false,
