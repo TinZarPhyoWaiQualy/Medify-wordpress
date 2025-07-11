@@ -96,7 +96,6 @@
 <script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery-3.7.1.min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery.matchHeight.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/assets/slick/slick.min.js"></script>
-<script src="<?php bloginfo('template_directory'); ?>/assets/js/template-part.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery.counterup.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery-waypoints.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/assets/js/common.js"></script>
