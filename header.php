@@ -77,7 +77,7 @@
 							<a href="<?php echo home_url(); ?>/faq/" class="submenu-link">FAQ</a>
 						</div>
 					</div>
-					<a href="<?php echo home_url(); ?>/blog2column/" id="homeLink" class="sidebar-link">Blog</a>
+					<a href="<?php echo home_url(); ?>/blog/" id="homeLink" class="sidebar-link">Blog</a>
 					<a href="<?php echo home_url(); ?>/contact/" id="homeLink" class="sidebar-link">Contacts</a>
 				</nav>
 			</div>
@@ -112,7 +112,7 @@
 										<a href="<?php echo home_url(); ?>/faq/">FAQ</a>
 									</div>
 								</div>
-								<div class="menu-item"><a href="<?php echo home_url(); ?>/blog2column/">Blog</a></div>
+								<div class="menu-item"><a href="<?php echo home_url(); ?>/blog/">Blog</a></div>
 								<div class="menu-item"><a href="<?php echo home_url(); ?>/contacts/">Contacts</a></div>
 							</div>
 						</nav>

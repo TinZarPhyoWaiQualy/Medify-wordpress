@@ -3748,7 +3748,7 @@
     z-index: 1;
     color: #2ea6f7;
     background-color: #ffffff;
-    width: 90px;
+    /* width: 90px; */
     height: 35px;
     position: absolute;
     top: 31px;
@@ -3757,7 +3757,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 1px;
+    padding:10px 11px;
     box-shadow: 7px 5px 15px 0px rgba(0, 0, 0, 0.09);
     border-radius: 5px;
 }
@@ -3815,7 +3815,7 @@
 .blog-single-date::after {
     content: "";
     position: absolute;
-    left: 151px;
+    left: 116px;
     top: 50%;
     transform: translateY(-50%);
     width: 5px;
