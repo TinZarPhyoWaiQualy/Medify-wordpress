@@ -2,7 +2,7 @@
 
 /*Top Page Start */
 .top-mv-slider {
-    background: url(https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/top/top-mv-bg-test.jpg) no-repeat;
+    background: url(../img/top/top-mv-bg-test.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -11,13 +11,13 @@
 }
 
 .top-mv-two {
-    background: url(https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/top/top-slider-bg-2.jpg) no-repeat;
+    background: url(../img/top/top-slider-bg-2.jpg) no-repeat;
     background-size: cover;
     position: relative;
 }
 
 .top-mv-three {
-    background: url(https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/top/top-slider-bg-3.jpg) no-repeat;
+    background: url(../img/top/top-slider-bg-3.jpg) no-repeat;
     background-size: cover;
     position: relative;
 }
@@ -102,7 +102,7 @@
 }
 
 .top-benefit {
-    background: url(https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/top/top-benefit-bg.jpg) no-repeat;
+    background: url(../img/top/top-benefit-bg.jpg) no-repeat;
     background-size: cover;
     padding: 92px 0 160px 0;
 }
@@ -286,7 +286,7 @@
 }
 
 .care-amenitie {
-    background: url(https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/top/why-choose.jpg) no-repeat;
+    background: url(../img/top/why-choose.jpg) no-repeat;
     background-size: cover;
     padding: 90px 0;
 }
@@ -397,19 +397,19 @@
 /* top our team card end */
 @media screen and (max-width: 1300px) {
     .top-mv-slider {
-        background: url(https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/top/top-slider-bg-mw1300.jpg) no-repeat;
+        background: url(../img/top/top-slider-bg-mw1300.jpg) no-repeat;
         background-size: cover;
         background-position: center;
     }
 
     .top-mv-two {
-        background: url(https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/top/top-slider-bg-2-mw1300.jpg) no-repeat;
+        background: url(../img/top/top-slider-bg-2-mw1300.jpg) no-repeat;
         background-size: cover;
         position: relative;
     }
 
     .top-mv-three {
-        background: url(https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/top/top-slider-bg-3\ -\ Copy.jpg) no-repeat;
+        background: url(../img/top/top-slider-bg-3\ -\ Copy.jpg) no-repeat;
         background-size: cover;
         position: relative;
     }
@@ -520,19 +520,19 @@
 
 @media screen and (max-width: 1000px) {
     .top-mv-slider {
-        background: url(https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/top/top-slider-bg-mw1000.png) no-repeat;
+        background: url(../img/top/top-slider-bg-mw1000.png) no-repeat;
         background-size: cover;
         background-position: center;
     }
 
     .top-mv-two {
-        background: url(https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/top/top-slider-bg-2-mw1300.jpg) no-repeat;
+        background: url(../img/top/top-slider-bg-2-mw1300.jpg) no-repeat;
         background-size: cover;
         position: relative;
     }
 
     .top-mv-three {
-        background: url(https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/top/top-slider-bg-3-mv1000.jpg) no-repeat;
+        background: url(../img/top/top-slider-bg-3-mv1000.jpg) no-repeat;
         background-size: cover;
         position: relative;
     }
@@ -588,20 +588,20 @@
 
 @media screen and (max-width: 768px) {
     .top-mv-slider {
-        background: url(https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/top/top-slider-bg-mw768.jpg) no-repeat;
+        background: url(../img/top/top-slider-bg-mw768.jpg) no-repeat;
         background-size: cover;
         background-position: center;
         height: 500px;
     }
 
     .top-mv-two {
-        background: url(https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/top/top-slider-bg-2-mw768.jpg) no-repeat;
+        background: url(../img/top/top-slider-bg-2-mw768.jpg) no-repeat;
         background-size: cover;
         position: relative;
     }
 
     .top-mv-three {
-        background: url(https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/top/top-slider-bg-3-mw768.jpg) no-repeat;
+        background: url(../img/top/top-slider-bg-3-mw768.jpg) no-repeat;
         background-size: cover;
         position: relative;
     }
@@ -638,7 +638,7 @@
     }
 
     .care-amenitie {
-        background: url(https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/top/why-choose-sp.jpg) no-repeat;
+        background: url(../img/top/why-choose-sp.jpg) no-repeat;
         background-size: cover;
         background-position: center;
     }
@@ -744,17 +744,17 @@
 
 @media screen and (max-width: 400px) {
     .top-mv-slider {
-        background: url(https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/top/top-slider-bg-mw375.jpg) no-repeat;
+        background: url(../img/top/top-slider-bg-mw375.jpg) no-repeat;
     }
 
     .top-mv-two {
-        background: url(https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/top/top-slider-bg-2-mw768.jpg) no-repeat;
+        background: url(../img/top/top-slider-bg-2-mw768.jpg) no-repeat;
         background-size: cover;
         position: relative;
     }
 
     .top-mv-three {
-        background: url(https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/top/top-slider-bg-3-mw768\ -\ Copy.jpg) no-repeat;
+        background: url(../img/top/top-slider-bg-3-mw768\ -\ Copy.jpg) no-repeat;
     }
 
     .top-slider-h2 {
@@ -762,7 +762,7 @@
     }
 
     .top-benefit {
-        background: url(https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/top/top-benefit-bg.jpg) no-repeat;
+        background: url(../img/top/top-benefit-bg.jpg) no-repeat;
         background-size: cover;
         padding: 50px 0 110px 0;
     }
@@ -824,7 +824,7 @@
 }
 
 .aboutus {
-    background-image: url(https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/aboutus/aboutus-logo.jpg);
+    background-image: url(../img/aboutus/aboutus-logo.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom center;
@@ -1261,7 +1261,7 @@
 }
 
 .history {
-    background-image: url(https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/our-history/half-doctor.jpg);
+    background-image: url(../img/our-history/half-doctor.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -1348,7 +1348,7 @@
 
 .mission-ul li::before {
     content: '';
-    background: url(https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/our-history/check.png) no-repeat;
+    background: url(../img/our-history/check.png) no-repeat;
     background-size: contain;
     width: 20px;
     height: 20px;
@@ -1389,7 +1389,7 @@
 
 .our-history-wrapper {
     background-color: #54ced4;
-    background-image: url(https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/our-history/our-history-bg.png);
+    background-image: url(../img/our-history/our-history-bg.png);
     background-position: center center;
     background-repeat: repeat;
     height: 100%;
@@ -1454,7 +1454,7 @@
     left: -38px;
     width: 30px;
     height: 30px;
-    background: url(https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/our-history/white_circle_icon.png) no-repeat;
+    background: url(../img/our-history/white_circle_icon.png) no-repeat;
     background-position: center;
     background-size: contain;
 }
@@ -1847,7 +1847,7 @@
         left: -28px;
         width: 20px;
         height: 20px;
-        background: url(https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/our-history/white_circle_icon.png) no-repeat;
+        background: url(../img/our-history/white_circle_icon.png) no-repeat;
         background-position: center;
         background-size: contain;
     }
@@ -1877,7 +1877,7 @@
 
 /* Service start */
 .service {
-    background-image: url(https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/service/half-doctor.jpg);
+    background-image: url(../img/service/half-doctor.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -2169,7 +2169,7 @@
 }
 
 .pricing_plan-wrap.blue {
-    background: url(https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/service/price_bg.jpg) no-repeat;
+    background: url(../img/service/price_bg.jpg) no-repeat;
     background-size: cover;
 }
 
@@ -2314,7 +2314,7 @@
 
 /* Doctor Start */
 .doctor {
-    background-image: url(https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/doctor/half-doctor.jpg);
+    background-image: url(../img/doctor/half-doctor.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -2507,7 +2507,7 @@
 }
 
 .dcard-icon {
-    background: url(https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/doctor/plus.png) no-repeat;
+    background: url(../img/doctor/plus.png) no-repeat;
     background-size: contain;
     width: 20px;
     height: 20px;
@@ -2518,7 +2518,7 @@
 }
 
 .dcard-icon-wrapper:hover .dcard-icon {
-    background: url(https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/doctor/cross.png) no-repeat;
+    background: url(../img/doctor/cross.png) no-repeat;
     background-size: contain;
     width: 15px;
     height: 15px;
@@ -2893,7 +2893,7 @@
 }
 
 .faq {
-    background-image: url(https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/faq/faq-bg.jpg);
+    background-image: url(../img/faq/faq-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom center;
@@ -3178,7 +3178,7 @@
 }
 
 .blog2column {
-    background-image: url(https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/blog2column/blog-2column-bg.jpg);
+    background-image: url(../img/blog2column/blog-2column-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom center;
@@ -3620,7 +3620,7 @@
 
 .blogsingle-section {
     background-color: #f2f2f4;
-    background-image: url("https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/singleblog/blogsingle-mv.jpg");
+    background-image: url("../img/singleblog/blogsingle-mv.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom center;
@@ -3943,7 +3943,7 @@
     top: 24px;
     width: 32px;
     height: 32px;
-    background-image: url("https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/singleblog/blockquote.png");
+    background-image: url("../img/singleblog/blockquote.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -4530,7 +4530,7 @@
 }
 
 .contacts {
-    background-image: url(https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/contact-us/half-doctor.jpg);
+    background-image: url(../img/contact-us/half-doctor.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -4803,7 +4803,7 @@
 }
 
 .error {
-    background-image: url(https://thethsuqualy.github.io/testsite/wp-content/themes/medify/assets/img/404page/404_page_title.jpg);
+    background-image: url(../img/404page/404_page_title.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom center;
