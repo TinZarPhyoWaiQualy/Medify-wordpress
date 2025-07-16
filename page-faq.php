@@ -51,52 +51,7 @@ get_header();
             </div>
           <?php endforeach; ?>
 
-
-          <div class="faq-item">
-            <div class="faq-question">
-              <h4 class="faq-ttl">Who are always careful to our patient?</h4>
-            </div>
-            <div class="faq-answer">
-              The specific features of work of the general practitioner
-              (family doctor) are more reasonable and beneficial to both GPs
-              and patients in many respects.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question">
-              <h4 class="faq-ttl">What has access to my health and life?</h4>
-            </div>
-            <div class="faq-answer">
-              The specific features of work of the general practitioner
-              (family doctor) are more reasonable and beneficial to both GPs
-              and patients in many respects.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question">
-              <h4 class="faq-ttl">
-                Who are allways carefull to our patient?
-              </h4>
-            </div>
-            <div class="faq-answer">
-              The specific features of work of the general practitioner
-              (family doctor) are more reasonable and beneficial to both GPs
-              and patients in many respects.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question">
-              <h4 class="faq-ttl">What is Medify and how does it work?</h4>
-            </div>
-            <div class="faq-answer">
-              The specific features of work of the general practitioner
-              (family doctor) are more reasonable and beneficial to both GPs
-              and patients in many respects.
-            </div>
-          </div>
+       
         </div>
       <?php else: ?>
         <p>No FAQs found.</p>
