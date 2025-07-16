@@ -127,16 +127,16 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    // Submenu toggle
-    if (submenuArrow && submenu) {
-      submenuArrow.addEventListener("click", (e) => {
+    if (submenuToggle && submenu && submenuArrow) {
+      submenuToggle.addEventListener("click", (e) => {
         e.stopPropagation();
-        submenu.style.display =
-          submenu.style.display === "block" ? "none" : "block";
-        submenuArrow.classList.toggle("rotate");
+        const isOpen = submenu.style.display === "block";
+
+        submenu.style.display = isOpen ? "none" : "block";
+        submenuToggle.classList.toggle("active", !isOpen);
+        submenuArrow.classList.toggle("rotate", !isOpen);
       });
     }
-
     // Highlight current page link and parent submenu
     let currentPath = window.location.pathname
       .replace(/^\/|\/$/g, "") // remove leading/trailing slashes
@@ -164,6 +164,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }, 2000);
 
+  // ✅ Reset all mobile states when resizing to desktop
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) {
+      const hamburger = document.getElementById("hamburger");
+      const sidebar = document.getElementById("sidebar");
+      const overlay = document.getElementById("sidebarOverlay");
+
+      sidebar?.classList.remove("active");
+      overlay?.classList.remove("active");
+      hamburger?.classList.remove("active");
+
+      document.body.classList.remove("no-scroll");
+      document.body.classList.remove("hide-header");
+    }
+  });
   //humburger end
 
   //faq start

@@ -482,18 +482,28 @@ Background Color
   border: none;
 }
 
-.sidebar.active {
-  left: 0;
-}
-
-.sidebar-overlay.active {
-  display: block;
-}
-
 .close-btn {
   font-size: 26px;
   cursor: pointer;
   color: #fff;
+}
+
+@media (min-width: 769px) {
+  .sidebar {
+    left: -416px !important;
+  }
+
+  .sidebar-overlay {
+    display: none !important;
+  }
+
+  .menu {
+    display: flex !important;
+  }
+
+  .hamburger-menu {
+    display: none !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -509,6 +519,14 @@ Background Color
     background: rgba(49, 49, 49, 1);
   }
 
+  .sidebar.active {
+    left: 0;
+  }
+
+  .sidebar-overlay.active {
+    display: block;
+  }
+
   .clinic-logo-sp-img {
     display: block;
   }
@@ -518,7 +536,6 @@ Background Color
   }
 
 }
-
 /* end header */
 
 /* start footer */
@@ -1466,7 +1483,7 @@ Background Color
   margin: 0 20px;
 }
 
-.ad-slider.slick-slide{
+.ad-slider.slick-slide {
   display: flex;
   align-items: center;
   justify-content: center;
