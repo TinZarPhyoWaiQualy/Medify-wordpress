@@ -243,7 +243,7 @@
 .about-me-h3.history-header {
     max-width: 450px;
     line-height: 1.5;
-    margin:10px 0 20px 0;
+    margin: 10px 0 20px 0;
 }
 
 .about-me-label::after {
@@ -655,10 +655,12 @@
         margin: 60px auto;
         gap: 30px;
     }
-    .about-me-h3.history-header{
+
+    .about-me-h3.history-header {
         font-size: 35px;
         max-width: 100%;
     }
+
     .top-our-media-wrapper {
         padding-bottom: 20px;
     }
@@ -1166,6 +1168,7 @@
         font-size: 30px;
 
     }
+
     .aboutus {
         margin-bottom: 50px;
     }
@@ -3742,6 +3745,7 @@
     font-size: 14px;
     font-weight: 800;
     color: #aeb6c2;
+    flex-wrap: wrap;
 }
 
 .beauty-box {
@@ -3757,7 +3761,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding:10px 11px;
+    padding: 10px 11px;
     box-shadow: 7px 5px 15px 0px rgba(0, 0, 0, 0.09);
     border-radius: 5px;
 }
@@ -3784,18 +3788,6 @@
     position: relative;
 }
 
-.developer::before {
-    content: "";
-    position: absolute;
-    left: 136px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 5px;
-    height: 5px;
-    background-color: #2ea6f7;
-    border-radius: 50%;
-}
-
 .developer::after {
     content: "";
     position: absolute;
@@ -3812,10 +3804,14 @@
     background-color: #2ea6f7;
 }
 
-.blog-single-date::after {
+.beauty span:not(:first-child) {
+    position: relative;
+}
+
+.beauty span:not(:first-child)::before {
     content: "";
     position: absolute;
-    left: 116px;
+    left: -12px;
     top: 50%;
     transform: translateY(-50%);
     width: 5px;
@@ -4378,7 +4374,7 @@
     }
 
     .comments {
-        padding-left: 20px;
+        margin-left: 14px;
     }
 
     .beauty {
