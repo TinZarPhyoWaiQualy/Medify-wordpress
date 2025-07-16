@@ -331,7 +331,7 @@ get_header();
       <?php
       $args = array(
         'post_type'      => 'post',
-        'posts_per_page' => 4, // Number of posts to show
+        'posts_per_page' => 3, // Number of posts to show
       );
 
       $blog_query = new WP_Query($args);
@@ -368,40 +368,6 @@ get_header();
         wp_reset_postdata();
       endif;
       ?>
-
-      <!-- <div class="slider-ourteam-card">
-        <div class="slider-wrapper">
-          <span class="badge">BEAUTY</span>
-          <div class="top-wlslider">
-            <div>
-              <img src="<?php bloginfo('template_directory'); ?>/assets/img/common/nursingcare.jpg" alt="Slide 1" class="top-wlslider-img" />
-            </div>
-          </div>
-        </div>
-        <div class="post-info">
-          <span class="post-date">AUGUST 5, 2019</span>
-          <h3 class="post-title">
-            Hospital Nursing Care: Some Observations
-          </h3>
-        </div>
-      </div>
-
-      <div class="slider-ourteam-card">
-        <div class="slider-wrapper">
-          <span class="badge">TIPS</span>
-          <div class="top-wlslider">
-            <div>
-              <img src="<?php bloginfo('template_directory'); ?>/assets/img/common/boostrix.jpg" alt="Slide 1" class="top-wlslider-img" />
-            </div>
-          </div>
-        </div>
-        <div class="post-info">
-          <span class="post-date">AUGUST 5, 2019</span>
-          <h3 class="post-title">
-            Boostrix for Vacination of Adults Against Diphteria
-          </h3>
-        </div>
-      </div> -->
     </div>
   </section>
 </main>
