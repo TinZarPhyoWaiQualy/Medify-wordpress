@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const elemPos = $(elem).offset().top;
     const scroll = $(window).scrollTop();
     const windowHeight = $(window).height();
-    return scroll >= elemPos - windowHeight + 110;
+    return scroll >= elemPos - windowHeight + 30;
   }
 
   setTimeout(function () {
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         topBtn.classList.add("hide");
       }
-
+      
       // Add/remove 'footer-above' if footer is visible
       if (isVisableFromTop($("footer"))) {
         topBtn.classList.add("footer-above");

@@ -14,7 +14,7 @@
 
 <footer>
 	<section id="footerPart">
-		<div class="top-btn-container">
+		<div class="top-btn-container footer-above">
 			<div class="top-to-btn">
 				<img src="<?php bloginfo('template_directory'); ?>/assets/img/common/top-to-btn.png" alt="top-to-btn" class="top-to-btn-img">
 			</div>
