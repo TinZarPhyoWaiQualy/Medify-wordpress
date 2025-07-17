@@ -26,49 +26,50 @@ get_header();
         <div class="blog2column-siderbar-wrapper">
             <div>
                 <div class="slider-card-wrapper">
-                <?php
-                $args = array(
-                    'post_type'      => 'post',
-                    'posts_per_page' => 5, // Number of posts to show
-                );
+                    <?php
+                    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+                    $args = array(
+                        'post_type'      => 'post',
+                        'posts_per_page' => 5,
+                        'paged'          => $paged,
+                    );
 
-                $blog_query = new WP_Query($args);
+                    $blog_query = new WP_Query($args);
 
-                if ($blog_query->have_posts()) :
-                    while ($blog_query->have_posts()) : $blog_query->the_post();
-                        $categories = get_the_category();
-                        $badge = !empty($categories) ? $categories[0]->name : 'NEWS';
-                ?>
-                        <a href="<?php the_permalink(); ?>">
-                            <div class="slider-card">
-                                <div class="slider-wrapper">
-                                    <span class="badge"><?php echo esc_html($badge); ?></span>
-                                    <div class="wlslider">
-                                        <div>
-                                            <?php if (has_post_thumbnail()) : ?>
-                                                <?php the_post_thumbnail('full'); ?>
-                                            <?php else : ?>
-                                                <img src="<?php bloginfo('template_directory'); ?>/assets/img/default.jpg" alt="Default Image">
-                                            <?php endif; ?>
+                    if ($blog_query->have_posts()) :
+                        while ($blog_query->have_posts()) : $blog_query->the_post();
+                            $categories = get_the_category();
+                            $badge = !empty($categories) ? $categories[0]->name : 'NEWS';
+                    ?>
+                            <a href="<?php the_permalink(); ?>">
+                                <div class="slider-card">
+                                    <div class="slider-wrapper">
+                                        <span class="badge"><?php echo esc_html($badge); ?></span>
+                                        <div class="wlslider">
+                                            <div>
+                                                <?php if (has_post_thumbnail()) : ?>
+                                                    <?php the_post_thumbnail('full'); ?>
+                                                <?php else : ?>
+                                                    <img src="<?php bloginfo('template_directory'); ?>/assets/img/default.jpg" alt="Default Image">
+                                                <?php endif; ?>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="post-info">
+                                        <span class="post-date"><?php echo get_the_date('F j, Y'); ?></span>
+                                        <h3 class="post-title"><?php the_title(); ?></h3>
+                                    </div>
                                 </div>
-                                <div class="post-info">
-                                    <span class="post-date"><?php echo get_the_date('F j, Y'); ?></span>
-                                    <h3 class="post-title"><?php the_title(); ?></h3>
-                                </div>
-                            </div>
-                        </a>
-                <?php
-                    endwhile;
-                ?>
-            </div>
-            <div class="pagination">
-                <?php wp_pagenavi(array('query' => $blog_query)); ?>
-                <?php  wp_reset_postdata();
-                endif;?>
-            </div>
-
+                            </a>
+                        <?php
+                        endwhile;
+                        ?>
+                </div>
+                <div class="pagination">
+                    <?php wp_pagenavi(array('query' => $blog_query)); ?>
+                </div>
+                <?php wp_reset_postdata(); ?>
+            <?php endif; ?>
             </div>
 
             <div class="blog-single-sidebar">
