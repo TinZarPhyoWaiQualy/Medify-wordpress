@@ -25,7 +25,7 @@ get_header();
     <section class="blog2column-slider-sidebar-wrapper">
         <div class="blog2column-siderbar-wrapper">
             <div>
-                <div class="slider-card-wrapper">
+                <!-- <div class="slider-card-wrapper">
                     <?php
                     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                     $args = array(
@@ -64,13 +64,104 @@ get_header();
                         <?php
                         endwhile;
                         ?>
+                </div> -->
+
+                <div class="slider-card-wrapper">
+<?php
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+$args = array(
+    'post_type'      => 'post',
+    'posts_per_page' => 6,
+    'paged'          => $paged,
+);
+$blog_query = new WP_Query($args);
+
+if ($blog_query->have_posts()) :
+    while ($blog_query->have_posts()) : $blog_query->the_post();
+
+        $categories = get_the_category();
+        $badge = !empty($categories) ? $categories[0]->name : 'NEWS';
+
+        // ✅ Get individual SCF image fields
+        $img1 = SCF::get('blog-slider');
+        $img2 = SCF::get('blog-slider');
+        $img3 = SCF::get('blog-slider');
+
+        $raw_images = array_filter([$img1, $img2, $img3]); // remove empty ones
+
+        $images = [];
+        foreach ($raw_images as $img) {
+            if (is_numeric($img)) {
+                $img_url = wp_get_attachment_url($img);
+            } else {
+                $img_url = esc_url($img); // fallback if SCF returns full URL
+            }
+            if ($img_url) {
+                $images[] = $img_url;
+            }
+        }
+
+        $image_count = count($images);
+?>
+    <a href="<?php the_permalink(); ?>">
+        <div class="slider-card">
+            <div class="slider-wrapper">
+                <span class="badge"><?php echo esc_html($badge); ?></span>
+                <div class="wlslider">
+                    <?php if ($image_count >= 2): ?>
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <?php foreach ($images as $img_url): ?>
+                                    <div class="swiper-slide">
+                                        <img src="<?php echo esc_url($img_url); ?>" alt="<?php the_title_attribute(); ?>" />
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    <?php elseif ($image_count === 1): ?>
+                        <img src="<?php echo esc_url($images[0]); ?>" alt="<?php the_title_attribute(); ?>" class="choose-blog" />
+                    <?php else: ?>
+                        <?php if (has_post_thumbnail()) {
+                            the_post_thumbnail('full', ['class' => 'choose-blog']);
+                        } else { ?>
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/default.jpg" alt="Default" class="choose-blog" />
+                        <?php } ?>
+                    <?php endif; ?>
                 </div>
+            </div>
+            <div class="post-info">
+                <span class="post-date"><?php echo get_the_date('F j, Y'); ?></span>
+                <h3 class="post-title"><?php the_title(); ?></h3>
+            </div>
+        </div>
+    </a>
+<?php
+    endwhile;
+endif;
+wp_reset_postdata();
+?>
+</div>
+
+
+
+
+
+
+
+
                 <div class="pagination">
                     <?php wp_pagenavi(array('query' => $blog_query)); ?>
                 </div>
                 <?php wp_reset_postdata(); ?>
             <?php endif; ?>
             </div>
+
+
+
+
 
             <div class="blog-single-sidebar">
                 <sidebar class="sidebar-sticky">
