@@ -24,11 +24,12 @@ get_header();
 
     <section class="blog2column-slider-sidebar-wrapper">
         <div class="blog2column-siderbar-wrapper">
-            <div class="slider-card-wrapper">
+            <div>
+                <div class="slider-card-wrapper">
                 <?php
                 $args = array(
                     'post_type'      => 'post',
-                    'posts_per_page' => 15, // Number of posts to show
+                    'posts_per_page' => 5, // Number of posts to show
                 );
 
                 $blog_query = new WP_Query($args);
@@ -60,9 +61,14 @@ get_header();
                         </a>
                 <?php
                     endwhile;
-                    wp_reset_postdata();
-                endif;
                 ?>
+            </div>
+            <div class="pagination">
+                <?php wp_pagenavi(array('query' => $blog_query)); ?>
+                <?php  wp_reset_postdata();
+                endif;?>
+            </div>
+
             </div>
 
             <div class="blog-single-sidebar">
