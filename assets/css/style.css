@@ -311,13 +311,13 @@
 }
 
 /* top our team card start */
-.slider-ourteam-card {
+/* .slider-ourteam-card {
     max-width: 370px;
 }
 
 .top-wlslider {
     max-width: 370px;
-}
+} */
 
 .slider-ourteam-card {
     max-width: 390px;
@@ -3733,7 +3733,8 @@
 
 .blog-single-doctor img {
     width: 898px;
-    height: 489px;
+    /* height: 489px; */
+    height: auto;
     border-radius: 20px;
 }
 
@@ -4019,7 +4020,8 @@
 
     .blog-single-doctor img {
         width: 805px;
-        height: 480px;
+        /* height: 480px; */
+        height: auto;
         border-radius: 20px;
     }
 }
@@ -4039,7 +4041,8 @@
 
     .blog-single-doctor img {
         width: 725px;
-        height: 423px;
+        /* height: 423px; */
+        height: auto;
 
     }
 }
@@ -4063,7 +4066,8 @@
 
     .blog-single-doctor img {
         width: 645px;
-        height: 423px;
+        /* height: 423px; */
+        height: auto;
 
     }
 }
@@ -4080,7 +4084,8 @@
 
     .blog-single-doctor img {
         width: 940px;
-        height: 527px;
+        /* height: 527px; */
+        height: auto;
     }
 
     .blog-single img {
@@ -4143,7 +4148,8 @@
 
     .blog-single-doctor img {
         width: 855px;
-        height: 488px;
+        /* height: 488px; */
+        height: auto;
     }
 }
 
@@ -4168,7 +4174,8 @@
 
     .blog-single-doctor img {
         width: 755px;
-        height: 437px;
+        /* height: 437px; */
+        height: auto;
     }
 }
 
@@ -4183,7 +4190,8 @@
 
     .blog-single-doctor img {
         width: 633px;
-        height: 363px;
+        /* height: 363px; */
+        height: auto;
     }
 
     .blog-single-leftside {
@@ -4212,7 +4220,8 @@
 @media screen and (max-width:711px) {
     .blog-single-doctor img {
         width: 567px;
-        height: 338px;
+        /* height: 338px; */
+        height: auto;
     }
 
     .blog-single-leftside {
@@ -4252,7 +4261,8 @@
 @media screen and (max-width:629px) {
     .blog-single-doctor img {
         width: 530px;
-        height: 316px;
+        height: auto;
+        /* height: 316px; */
     }
 
     .blog-single-leftside {
@@ -4261,7 +4271,8 @@
 
     .blog-single-doctor img {
         width: 519px;
-        height: 298px;
+        /* height: 298px; */
+        height: auto;
     }
 
     .blog-single blockquote {
@@ -4295,7 +4306,8 @@
 @media screen and (max-width:530px) {
     .blog-single-doctor img {
         width: 425px;
-        height: 263px;
+        height: auto;
+        /* height: 263px; */
     }
 
     .blog-single-leftside {
@@ -4309,7 +4321,8 @@
 
     .blog-single-doctor img {
         width: 420px;
-        height: 241px;
+        /* height: 241px; */
+        height: auto;
     }
 
     .blog-single blockquote {
@@ -4355,7 +4368,8 @@
 
     .blog-single-doctor img {
         width: 369px;
-        height: 192px;
+        /* height: 192px; */
+        height: auto;
     }
 
     .beauty-box {
@@ -4396,7 +4410,8 @@
 @media screen and (max-width:453px) {
     .blog-single-doctor img {
         width: 386px;
-        height: 227px;
+        /* height: 227px; */
+        height: auto;
     }
 
     .blog-single blockquote {
@@ -4434,7 +4449,8 @@
 
     .blog-single-doctor img {
         width: 336px;
-        height: 196px;
+        height: auto;
+        /* height: 196px; */
     }
 
     .blog-single blockquote {
@@ -4480,7 +4496,7 @@
 @media screen and (max-width:386px) {
     .blog-single-doctor img {
         width: 290px;
-        height: 173px;
+        height: auto;
     }
 
     .blog-single-leftside {
