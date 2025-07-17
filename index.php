@@ -327,56 +327,47 @@ get_header();
     </div>
 
     <div class="top-our-team">
-      <div class="slider-ourteam-card">
-        <div class="slider-wrapper">
-          <span class="badge">TIPS</span>
-          <div class="top-wlslider">
-            <div>
-              <img src="<?php bloginfo('template_directory'); ?>/assets/img/common/specialist.jpg" alt="Slide 1" class="top-wlslider-img" />
-            </div>
-          </div>
-        </div>
-        <div class="post-info">
-          <span class="post-date">AUGUST 5, 2019</span>
-          <h3 class="post-title">
-            How to Choose the Specialist in Massage
-          </h3>
-        </div>
-      </div>
 
-      <div class="slider-ourteam-card">
-        <div class="slider-wrapper">
-          <span class="badge">BEAUTY</span>
-          <div class="top-wlslider">
-            <div>
-              <img src="<?php bloginfo('template_directory'); ?>/assets/img/common/nursingcare.jpg" alt="Slide 1" class="top-wlslider-img" />
-            </div>
-          </div>
-        </div>
-        <div class="post-info">
-          <span class="post-date">AUGUST 5, 2019</span>
-          <h3 class="post-title">
-            Hospital Nursing Care: Some Observations
-          </h3>
-        </div>
-      </div>
+      <?php
+      $args = array(
+        'post_type'      => 'post',
+        'posts_per_page' => 3, // Number of posts to show
+      );
 
-      <div class="slider-ourteam-card">
-        <div class="slider-wrapper">
-          <span class="badge">TIPS</span>
-          <div class="top-wlslider">
-            <div>
-              <img src="<?php bloginfo('template_directory'); ?>/assets/img/common/boostrix.jpg" alt="Slide 1" class="top-wlslider-img" />
+      $blog_query = new WP_Query($args);
+
+      if ($blog_query->have_posts()) :
+        while ($blog_query->have_posts()) : $blog_query->the_post();
+          $categories = get_the_category();
+          $badge = !empty($categories) ? $categories[0]->name : 'NEWS';
+      ?>
+          <a href="<?php the_permalink(); ?>">
+            <div class="slider-ourteam-card">
+              <div class="slider-wrapper">
+                <span class="badge"><?php echo esc_html($badge); ?></span>
+                <div class="top-wlslider">
+                  <div>
+                    <?php if (has_post_thumbnail()) : ?>
+                      <?php the_post_thumbnail('full'); ?>
+                    <?php else : ?>
+                      <img src="<?php bloginfo('template_directory'); ?>/assets/img/default.jpg" alt="Default Image">
+                    <?php endif; ?>
+                  </div>
+                </div>
+              </div>
+              <div class="post-info">
+                <span class="post-date"><?php echo get_the_date('F j, Y'); ?></span>
+                <h3 class="post-title">
+                  <?php the_title(); ?>
+                </h3>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="post-info">
-          <span class="post-date">AUGUST 5, 2019</span>
-          <h3 class="post-title">
-            Boostrix for Vacination of Adults Against Diphteria
-          </h3>
-        </div>
-      </div>
+          </a>
+      <?php
+        endwhile;
+        wp_reset_postdata();
+      endif;
+      ?>
     </div>
   </section>
 </main>
