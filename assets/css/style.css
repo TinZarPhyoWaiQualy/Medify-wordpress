@@ -3230,7 +3230,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px 40px;
+    gap: 75px 40px;
     padding-top: 30px;
     place-items: center;
     padding-left: 20px;
@@ -3268,6 +3268,11 @@
     border-radius: 15px;
 }
 
+.wls-img {
+    width: 100%;
+    max-width: 800px;
+}
+
 .custom-prev,
 .custom-next {
     position: absolute;
@@ -3285,6 +3290,14 @@
     height: 50px;
 }
 
+.custom-prev img {
+    width: 20px;
+}
+
+.custom-next img {
+    width: 20px;
+}
+
 .custom-prev:hover,
 .custom-next:hover {
     background-color: #2ea6f7;
@@ -3297,6 +3310,46 @@
 .custom-next {
     right: 27px;
 }
+
+.button-read-more {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    position: relative;
+    font-family: "Ubuntu";
+    font-size: 16px;
+    font-weight: 700;
+    color: #54ced4;
+    margin-top: 8px;
+}
+
+.button-read-more,
+.button-read-more:visited {
+    color: #54ced4;
+}
+
+.button-read-more:hover {
+    color: #0A3380;
+}
+
+.btn-readmore {
+    width: 10px;
+    position: absolute;
+    left: 98px;
+    top: 5px;
+}
+
+.button-read-more:after {
+    font-family: "Flaticon";
+    font-size: 16px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    opacity: 1;
+}
+
 
 .wlslider.slick-slide {
     opacity: 0;

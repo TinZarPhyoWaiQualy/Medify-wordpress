@@ -35,12 +35,48 @@ get_header();
 					$badge = !empty($categories) ? $categories[0]->name : 'NEWS';
 					?>
 					<span class="beauty-box"><?php echo esc_html($badge); ?></span>
-					<?php if (has_post_thumbnail()) : ?>
+					<!-- <?php if (has_post_thumbnail()) : ?>
+						<?php the_post_thumbnail('full'); ?>
+					<?php else : ?>
+						<img src="<?php bloginfo('template_directory'); ?>/assets/img/default.jpg" alt="Default Image">
+					<?php endif; ?> -->
+
+					<?php
+					// 👇 SCF Slider Code Inserted Here
+					$raw_images = SCF::get('blog_slider_img', get_the_ID());
+					$images = [];
+
+					if (is_array($raw_images)) {
+						foreach ($raw_images as $img) {
+							if (is_numeric($img)) {
+								$images[] = esc_url(wp_get_attachment_url($img));
+							} elseif (is_array($img) && isset($img['url'])) {
+								$images[] = esc_url($img['url']);
+							}
+						}
+					}
+
+					if (!empty($images)) : ?>
+						<div class="wlslider" style="position: relative;">
+							<?php foreach ($images as $img_url) : ?>
+								<div class="wls-img">
+									<img src="<?php echo esc_url($img_url); ?>" alt="<?php the_title_attribute(); ?>"  />
+									<button class="custom-prev" type="button" aria-label="Previous Slide">
+										<img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog2column/prev-arrow.png" alt="Previous" />
+									</button>
+									<button class="custom-next" type="button" aria-label="Next Slide">
+										<img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog2column/next-arrow.png" alt="Next" />
+									</button>
+								</div>
+							<?php endforeach; ?>
+						</div>
+					<?php elseif (has_post_thumbnail()) : ?>
 						<?php the_post_thumbnail('full'); ?>
 					<?php else : ?>
 						<img src="<?php bloginfo('template_directory'); ?>/assets/img/default.jpg" alt="Default Image">
 					<?php endif; ?>
-					
+
+
 					<div class="beauty">
 						<span class="blog-single-date"><?php echo get_the_date('F j, Y'); ?></span>
 						<span class="developer">BY<a href="#" class="bydeveloper">DEVELOPER</a></span>
@@ -192,31 +228,28 @@ get_header();
 						</div>
 					</div>
 
+
 					<div class="categories-wrapper">
 						<h6 class="categories">CATEGORIES</h6>
 						<div class="category-list">
-							<div class="category-item">
-								<span class="category">Beauty</span>
-								<span class="dash-line"></span>
-								<span class="page-number">4</span>
-							</div>
-							<div class="category-item">
-								<span class="category">Health</span>
-								<span class="dash-line"></span>
-								<span class="page-number">5</span>
-							</div>
-							<div class="category-item">
-								<span class="category">Tips</span>
-								<span class="dash-line"></span>
-								<span class="page-number">6</span>
-							</div>
-							<div class="category-item">
-								<span class="category">Vacination</span>
-								<span class="dash-line"></span>
-								<span class="page-number">4</span>
-							</div>
+							<?php
+							$categories = get_categories([
+								'orderby' => 'name',
+								'order'   => 'ASC',
+								'hide_empty' => false
+							]);
+
+							foreach ($categories as $category):
+							?>
+								<div class="category-item">
+									<span class="category"><?php echo esc_html($category->name); ?></span>
+									<span class="dash-line"></span>
+									<span class="page-number"><?php echo esc_html($category->count); ?></span>
+								</div>
+							<?php endforeach; ?>
 						</div>
 					</div>
+
 
 					<div class="gallery-wrapper">
 						<h5 class="gallery">GALLERY</h5>
@@ -256,7 +289,7 @@ get_header();
 									</h2>
 									<span class="emergency-number">+8 (123) 456 789 12</span>
 									<div class="emergencycall-wrapper">
-										<a href="#" class="emergency-call"><span>Call Now</span></a>
+										<a href="tel:+8(123)45678912" class="emergency-call"><span>Call Now</span></a>
 									</div>
 								</div>
 							</div>

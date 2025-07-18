@@ -536,6 +536,7 @@ Background Color
   }
 
 }
+
 /* end header */
 
 /* start footer */
@@ -1557,6 +1558,14 @@ Background Color
   font-family: "Ubuntu";
   font-size: 48px;
   font-weight: 700;
+  color: #ffffff;
+}
+
+.call-center-no:visited,
+.call-center-no:active,
+.call-center-no:focus,
+.call-center-no:hover {
+  color: #ffffff;
 }
 
 @media screen and (max-width: 768px) {
@@ -1855,7 +1864,10 @@ Background Color
   cursor: pointer;
 }
 
-.emergency-call:hover {
+.emergency-call:hover,
+.emergency-call:visited,
+.emergency-call:focus,
+.emergency-call:active {
   color: #ffffff;
   background: #2ea6f7;
 }

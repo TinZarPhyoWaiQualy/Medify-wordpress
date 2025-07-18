@@ -31,7 +31,7 @@
 						</div>
 						<div class="our-phone">
 							<img src="<?php bloginfo('template_directory'); ?>/assets/img/common/contact.png" class="contact" alt="contact" />
-							<span class="content">Call Us 24/7<br />+8 (123) 456 789 12</span>
+							<a href="tel:+8(123)45678912" class="content">Call Us 24/7<br />+8 (123) 456 789 12</a>
 						</div>
 						<div class="our-opening-clock">
 							<img src="<?php bloginfo('template_directory'); ?>/assets/img/common/clock.png" class="clock" alt="clock" />
@@ -100,5 +100,5 @@
 <script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery-waypoints.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/assets/js/common.js"></script>
 </body>
-
+<?php wp_footer(); ?>
 </html>

@@ -304,7 +304,7 @@ get_header();
       <div class="call-center-img"><img src="<?php bloginfo('template_directory'); ?>/assets/img/common/24-hours1.png" alt="phone"></div>
       <h3 class="call-center-h3">
         <p class="call-center-label">Need a Doctor for Check-up? Call for an Emergency Service!</p>
-        <p class="call-center-no">+8 (123) 456 789 12 </p>
+        <a href="tel:+8(123)45678912" class="call-center-no"><p>+8 (123) 456 789 12 </p></a>
       </h3>
     </div>
   </section>

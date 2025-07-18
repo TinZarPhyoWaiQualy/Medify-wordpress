@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         topBtn.classList.add("hide");
       }
-      
+
       // Add/remove 'footer-above' if footer is visible
       if (isVisableFromTop($("footer"))) {
         topBtn.classList.add("footer-above");
@@ -249,7 +249,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   //blog singel end
-
 });
 // Your jQuery code goes here
 // ads slider start
@@ -313,41 +312,28 @@ $(function () {
 
   //blog2column slider start
 
-  // $(".wlslider").each(function () {
-  //   console.log("jQuery loaded:", typeof $);
-  //   const $slider = $(this);
-  //   const slideCount = $slider.children().length;
+  jQuery(document).ready(function ($) {
+    $(".wlslider").each(function () {
+      const $slider = $(this);
 
-  //   if (slideCount < 2) return;
+      if ($slider.children("div").length < 2) return;
 
-  //   $slider.slick({
-  //     autoplay: false,
-  //     arrows: true,
-  //     dots: false,
-  //     infinite: true,
-  //     slidesToShow: 1,
-  //     slidesToScroll: 1,
-  //     pauseOnHover: false,
-  //     adaptiveHeight: true,
-  //     speed: 1500,
-  //     fade: true,
-  //     cssEase: "ease-in-out",
-  //     prevArrow: $(".custom-prev"),
-  //     nextArrow: $(".custom-next"),
-  //   });
-  // });
-jQuery(document).ready(function ($) {
-  $('.my-slider').slick({
-    autoplay: true,
-    arrows: true,
-    dots: true,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1
+      $slider.slick({
+        arrows: true,
+        fade: true,
+        infinite: true,
+        autoplay: false,
+        speed: 1500,
+        pauseOnHover: false,
+        cssEase: "ease-in-out",
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        adaptiveHeight: true,
+        prevArrow: $slider.find(".custom-prev"),
+        nextArrow: $slider.find(".custom-next"),
+      });
+    });
   });
-});
-
-
 
   //blog2column slider end
 });

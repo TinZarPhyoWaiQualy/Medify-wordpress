@@ -17,33 +17,14 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width,initial-scale=1" />
-	<title>Family Doctor</title>
-	<meta name="description" content="ページの説明" />
-	<meta name="format-detection" content="telephone=no" />
-
-	<!-- favicon/webclipicon -->
-	<!-- <link rel="icon" href="favicon.ico" />
-    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="webclip.png" /> -->
-
-	<!-- ogp -->
-	<meta property="og:site_name" content="サイト名" />
-	<meta property="og:url" content="URL" />
-	<meta property="og:type" content="website or article" />
-	<meta property="og:title" content="ページのタイトル" />
-	<meta property="og:description" content="ページの説明" />
-	<meta property="og:image" content="URL" />
-	<meta property="og:locale" content="ja_JP" />
-	<!-- <meta property="fb:app_id" content="AppID"> -->
-	<meta name="twitter:card" content="summary_large_image or summary" />
-	<!-- <meta name="twitter:site" content="@moshamusha2010" /> -->
-	<meta name="twitter:description" content="ページの説明" />
-	<meta name="twitter:image:src" content="URL" />
+	<?php wp_head(); ?>
 
 	<!-- fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" /> -->
+	<link
+		href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+		rel="stylesheet">
 
 	<!-- css -->
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/slick/slick.css" />
@@ -89,7 +70,8 @@
 							<div class="bar second-bar"></div>
 							<div class="bar third-bar"></div>
 						</div>
-						<a href="<?php echo home_url(); ?>/">
+						<h1>
+							<a href="<?php echo home_url(); ?>/">
 							<img
 								src="<?php bloginfo('template_directory'); ?>/assets/img/common/logo.png"
 								alt="logo"
@@ -99,6 +81,7 @@
 								alt="logo"
 								class="clinic-logo-sp-img" />
 						</a>
+						</h1>
 						<nav>
 							<div class="menu">
 								<div class="menu-item"><a href="<?php echo home_url(); ?>/">Home</a></div>
