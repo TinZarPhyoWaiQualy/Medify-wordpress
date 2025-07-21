@@ -310,7 +310,7 @@ get_header();
                             while ($blog_query->have_posts()) : $blog_query->the_post();
 
                                 $categories = get_the_category();
-                                $badge = !empty($categories) ? $categories[0]->name : 'NEWS';
+                                $badge = !empty($categories) ? $categories[0]->name : 'VACINATION';
 
                                 $raw_images = SCF::get('blog_slider_img', get_the_ID());
                                 $images = [];
