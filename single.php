@@ -59,7 +59,7 @@ get_header();
 						}
 					}
 
-					if (!empty($images)) : ?>
+					if (count($images) >= 2) : ?>
 						<div class="wlslider slidergp" style="position: relative;">
 							<?php foreach ($images as $img_url) : ?>
 								<div class="imggp">
@@ -72,6 +72,11 @@ get_header();
 									</button>
 								</div>
 							<?php endforeach; ?>
+						</div>
+
+					<?php elseif (count($images) === 1) : ?>
+						<div class="blogpost-img single-img">
+							<img src="<?php echo esc_url($images[0]); ?>" alt="<?php the_title_attribute(); ?>" />
 						</div>
 					<?php elseif (has_post_thumbnail()) : ?>
 						<?php the_post_thumbnail('full'); ?>

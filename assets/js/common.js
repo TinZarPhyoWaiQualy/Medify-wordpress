@@ -334,6 +334,30 @@ $(function () {
       });
     });
   });
-
   //blog2column slider end
+
+// top blogslider start
+ jQuery(document).ready(function ($) {
+    $(".top-wlslider").each(function () {
+      const $slider = $(this);
+
+      if ($slider.children("div").length < 2) return;
+
+      $slider.slick({
+        arrows: true,
+        fade: true,
+        infinite: true,
+        autoplay: false,
+        speed: 1500,
+        pauseOnHover: false,
+        cssEase: "ease-in-out",
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        adaptiveHeight: true,
+        prevArrow: $slider.find(".custom-prev"),
+        nextArrow: $slider.find(".custom-next"),
+      });
+    });
+  });
+// top blogslider end
 });

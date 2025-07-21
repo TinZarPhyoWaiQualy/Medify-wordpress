@@ -371,7 +371,7 @@ get_header();
       ?>
 
     </div> -->
-
+<!-- 
     <div class="top-our-team">
       <?php
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -417,7 +417,91 @@ get_header();
         wp_reset_postdata();
       endif;
       ?>
-    </div>
+    </div> -->
+
+<div class="top-our-team">
+    <?php
+        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+        $args = [
+            'post_type'      => 'post',
+            'posts_per_page' => 3,
+            'paged'          => $paged,
+        ];
+
+        $blog_query = new WP_Query($args);
+
+        if ($blog_query->have_posts()) :
+            while ($blog_query->have_posts()) : $blog_query->the_post();
+
+                $categories = get_the_category();
+                $badge = !empty($categories) ? $categories[0]->name : 'VACINATION';
+
+                $raw_images = SCF::get('blog_slider_img', get_the_ID());
+                $images = [];
+
+                if (is_array($raw_images)) {
+                    foreach ($raw_images as $img) {
+                        if (is_numeric($img)) {
+                            $images[] = esc_url(wp_get_attachment_url($img));
+                        } elseif (is_array($img) && isset($img['url'])) {
+                            $images[] = esc_url($img['url']);
+                        }
+                    }
+                }
+    ?>
+        <div class="slider-ourteam-card">
+            <div class="slider-wrapper">
+                <span class="badge"><?php echo esc_html($badge); ?></span>
+
+                <?php if (count($images) >= 2) : ?>
+                    <div class="top-wlslider" style="position: relative;">
+                        <?php foreach ($images as $img_url) : ?>
+                            <div>
+                                <div class="blogpost-img">
+                                    <img src="<?php echo esc_url($img_url); ?>" alt="<?php the_title_attribute(); ?>" class="wlslider-img" />
+                                </div>
+                                <button class="custom-prev" type="button" aria-label="Previous Slide">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog2column/prev-arrow.png" alt="Previous" />
+                                </button>
+                                <button class="custom-next" type="button" aria-label="Next Slide">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog2column/next-arrow.png" alt="Next" />
+                                </button>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                <?php elseif (count($images) === 1) : ?>
+                    <div class="blogpost-img">
+                        <img src="<?php echo esc_url($images[0]); ?>" alt="<?php the_title_attribute(); ?>" class="wlslider-img" />
+                    </div>
+                <?php else : ?>
+                    <?php if (has_post_thumbnail()) : ?>
+                        <div class="blogpost-img">
+                            <?php the_post_thumbnail('full', ['class' => 'wlslider-img']); ?>
+                        </div>
+                    <?php else : ?>
+                        <div class="blogpost-img">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog2column/dummy.jpg" alt="Default Image" class="wlslider-img" />
+                        </div>
+                    <?php endif; ?>
+                <?php endif; ?>
+            </div>
+
+            <div class="post-info">
+                <span class="post-date"><?php echo get_the_date('F j, Y'); ?></span>
+                <h3 class="post-title"><?php the_title(); ?></h3>
+                <a href="<?php the_permalink(); ?>" class="button-read-more latest">
+                    Read More
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog2column/readmore.png" alt="ReadMore" class="btn-readmore" />
+                </a>
+            </div>
+        </div>
+    <?php
+            endwhile;
+            wp_reset_postdata();
+        endif;
+    ?>
+</div>
+
 
   </section>
 </main>
