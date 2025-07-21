@@ -63,7 +63,7 @@ get_header();
 						<div class="wlslider slidergp" style="position: relative;">
 							<?php foreach ($images as $img_url) : ?>
 								<div class="imggp">
-									<img src="<?php echo esc_url($img_url); ?>" alt="<?php the_title_attribute(); ?>"  />
+									<img src="<?php echo esc_url($img_url); ?>" alt="<?php the_title_attribute(); ?>" />
 									<button class="custom-prev btn-prev" type="button" aria-label="Previous Slide">
 										<img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog2column/prev-arrow.png" alt="Previous" />
 									</button>
@@ -89,11 +89,15 @@ get_header();
 				<div class="blog-single">
 					<h2><?php the_title(); ?></h2>
 					<?php echo the_content(); ?>
-					<div>
-						<a>PREVIOUS</a>
-						<a>NEXT</a>
+
+					<div class="post-navigation">
+						<div class="prev-post">
+							<?php previous_post_link('%link', 'PREVIOUS '); ?>
+						</div>
+						<div class="next-post">
+							<?php next_post_link('%link', 'NEXT'); ?>
+						</div>
 					</div>
-					<!-- <?php echo the_content(); ?> -->
 				</div>
 			</div>
 			<div class="blog-single-sidebar">

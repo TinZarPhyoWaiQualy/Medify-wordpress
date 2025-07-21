@@ -4112,6 +4112,11 @@ width: 100%;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
+.post-navigation{
+    display: flex;
+    justify-content: space-between;
+}
+
 @media screen and (max-width:1266px) {
     .blog-single-wrapper {
         max-width: 1180px;
