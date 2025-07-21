@@ -304,7 +304,9 @@ get_header();
       <div class="call-center-img"><img src="<?php bloginfo('template_directory'); ?>/assets/img/common/24-hours1.png" alt="phone"></div>
       <h3 class="call-center-h3">
         <p class="call-center-label">Need a Doctor for Check-up? Call for an Emergency Service!</p>
-        <a href="tel:+8(123)45678912" class="call-center-no"><p>+8 (123) 456 789 12 </p></a>
+        <a href="tel:+8(123)45678912" class="call-center-no">
+          <p>+8 (123) 456 789 12 </p>
+        </a>
       </h3>
     </div>
   </section>
@@ -371,49 +373,51 @@ get_header();
     </div> -->
 
     <div class="top-our-team">
-  <?php
-  $args = array(
-    'post_type'      => 'post',
-    'posts_per_page' => 3, // Number of posts to show
-  );
+      <?php
+        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+        $args = [
+          'post_type'      => 'post',
+          'posts_per_page' => 3,
+          'paged'          => $paged,
+      ];
 
-  $blog_query = new WP_Query($args);
+      $blog_query = new WP_Query($args);
 
-  if ($blog_query->have_posts()) :
-    while ($blog_query->have_posts()) : $blog_query->the_post();
-      $categories = get_the_category();
-      $badge = !empty($categories) ? $categories[0]->name : 'NEWS';
-  ?>
-      <div class="slider-ourteam-card">
-        <div class="slider-wrapper">
-          <span class="badge"><?php echo esc_html($badge); ?></span>
-          <div class="top-wlslider">
-            <div>
-              <?php if (has_post_thumbnail()) : ?>
-                <?php the_post_thumbnail('full'); ?>
-              <?php else : ?>
-                <img src="<?php bloginfo('template_directory'); ?>/assets/img/default.jpg" alt="Default Image">
-              <?php endif; ?>
+      if ($blog_query->have_posts()) :
+        while ($blog_query->have_posts()) : $blog_query->the_post();
+          $categories = get_the_category();
+          $badge = !empty($categories) ? $categories[0]->name : 'VACINATION';
+      ?>
+          <div class="slider-ourteam-card">
+            <div class="slider-wrapper">
+              <span class="badge"><?php echo esc_html($badge); ?></span>
+              <div class="top-wlslider">
+                <div>
+                  <?php if (has_post_thumbnail()) : ?>
+                    <?php the_post_thumbnail('full'); ?>
+                  <?php else : ?>
+                    <img src="<?php bloginfo('template_directory'); ?>/assets/img/default.jpg" alt="Default Image">
+                  <?php endif; ?>
+                </div>
+              </div>
+            </div>
+
+            <div class="post-info">
+              <span class="post-date"><?php echo get_the_date('F j, Y'); ?></span>
+              <h3 class="post-title"><?php the_title(); ?></h3>
+
+              <a href="<?php the_permalink(); ?>" class="button-read-more latest">
+                Read More
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog2column/readmore.png" alt="ReadMore" class="btn-readmore" />
+              </a>
             </div>
           </div>
-        </div>
-
-        <div class="post-info">
-          <span class="post-date"><?php echo get_the_date('F j, Y'); ?></span>
-          <h3 class="post-title"><?php the_title(); ?></h3>
-
-          <a href="<?php the_permalink(); ?>" class="button-read-more latest">
-            Read More
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog2column/readmore.png" alt="ReadMore" class="btn-readmore" />
-          </a>
-        </div>
-      </div>
-  <?php
-    endwhile;
-    wp_reset_postdata();
-  endif;
-  ?>
-</div>
+      <?php
+        endwhile;
+        wp_reset_postdata();
+      endif;
+      ?>
+    </div>
 
   </section>
 </main>
