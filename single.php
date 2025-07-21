@@ -15,12 +15,15 @@ get_header();
 	<section class="blogsingle-section">
 		<div class="inner-blogsingle">
 			<h2 class="blogsingle-header">Blog</h2>
+			<?php
+			$categories = get_the_category();
+			$category_name = !empty($categories) ? strtolower(esc_html($categories[0]->name)) : 'uncategorized';
+			?>
 			<nav class="breadcrumb-nav">
 				<ul class="blogsingle-breadcrumb">
 					<li class="bs-breadcrumb-item"><a href="<?php echo home_url(); ?>/" class="bs-home">Home</a></li>
-					<li class="bs-breadcrumb-items">Beauty</li>
+					<li class="bs-breadcrumb-items"><?php echo $category_name; ?> </li>
 					<li class="bs-breadcrumb-item active">Hospital Nursing Care:</li>
-
 					<li class="bs-breadcrumb-item active">Some Observations</li>
 				</ul>
 			</nav>
