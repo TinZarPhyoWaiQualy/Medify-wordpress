@@ -337,7 +337,7 @@ get_header();
 
                                                 <?php foreach ($images as $img_url) : ?>
                                                     <div>
-                                                        <div><img src="<?php echo esc_url($img_url); ?>" alt="<?php the_title_attribute(); ?>" class="wlslider-img" /></div>
+                                                        <div class="blogpost-img"><img src="<?php echo esc_url($img_url); ?>" alt="<?php the_title_attribute(); ?>" class="wlslider-img" /></div>
                                                         <button class="custom-prev" type="button" aria-label="Previous Slide">
                                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog2column/prev-arrow.png" alt="Previous" />
                                                         </button>
@@ -348,12 +348,12 @@ get_header();
                                                 <?php endforeach; ?>
                                             </div>
                                         <?php elseif (count($images) === 1) : ?>
-                                            <div><img src="<?php echo esc_url($images[0]); ?>" alt="<?php the_title_attribute(); ?>" class="wlslider-img" /></div>    
+                                            <div class="blogpost-img"><img src="<?php echo esc_url($images[0]); ?>" alt="<?php the_title_attribute(); ?>" class="wlslider-img" /></div>    
                                         <?php else : ?>
                                             <?php if (has_post_thumbnail()) : ?>
-                                                <div><?php the_post_thumbnail('full', ['class' => 'wlslider-img']); ?></div>
+                                                <div class="blogpost-img"><?php the_post_thumbnail('full', ['class' => 'wlslider-img']); ?></div>
                                             <?php else : ?>
-                                                <div><img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog2column/dummy.jpg" alt="Default Image" class="wlslider-img" /></div>
+                                                <div class="blogpost-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog2column/dummy.jpg" alt="Default Image" class="wlslider-img" /></div>
                                             <?php endif; ?>
                                         <?php endif; ?>
                                     </div>

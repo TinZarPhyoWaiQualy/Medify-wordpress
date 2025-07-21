@@ -60,14 +60,14 @@ get_header();
 					}
 
 					if (!empty($images)) : ?>
-						<div class="wlslider" style="position: relative;">
+						<div class="wlslider slidergp" style="position: relative;">
 							<?php foreach ($images as $img_url) : ?>
-								<div class="wls-img">
+								<div class="imggp">
 									<img src="<?php echo esc_url($img_url); ?>" alt="<?php the_title_attribute(); ?>"  />
-									<button class="custom-prev" type="button" aria-label="Previous Slide">
+									<button class="custom-prev btn-prev" type="button" aria-label="Previous Slide">
 										<img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog2column/prev-arrow.png" alt="Previous" />
 									</button>
-									<button class="custom-next" type="button" aria-label="Next Slide">
+									<button class="custom-next btn-next" type="button" aria-label="Next Slide">
 										<img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog2column/next-arrow.png" alt="Next" />
 									</button>
 								</div>
@@ -88,93 +88,7 @@ get_header();
 				</div>
 				<div class="blog-single">
 					<h2><?php the_title(); ?></h2>
-					<p>
-						Rehabilitation medicine is one of the best-kept secrets in
-						healthcare. Although the specialty is as old as America’s Civil
-						War, few people are familiar with its history and purpose. Born
-						out of compassion for wounded soldiers in desperate need of
-						societal re-entry and meaningful employment, “physical
-						reconstruction” programs were developed to provide everything from
-						adaptive equipment to family training, labor alternatives and
-						psychological support for veterans.Physical medicine and
-						rehabilitation (PM&R) then expanded to meet the needs of those
-						injured in World Wars I & II, followed closely by children
-						disabled <a href="#">by the polio epidemic.</a> In time, people
-						recognized that a broad swath of diseases and traumatic injuries
-						required focused medical and physical therapy to achieve optimal
-						long term function.
-					</p>
-					<u>
-						Today, cancer patients frequently benefit from comprehensive
-						rehabilitation as they recover from the effects of chemo
-						(neuropathy, weakness, and cognitive impairments), radiation
-						(scarring and range of motion limitations), surgery (flaps,
-						plastics procedures, tumor resection, amputations), and brain
-						injuries.
-					</u>
-					<h3>Relieve from Stuffy Nose with No Medications</h3>
-					<p>
-						Rehabilitation is a phase of recovery occurring after any major
-						life-changing medical or surgical event. Our bodies are designed
-						to regenerate and repair, though optimizing this process takes
-						skilled guidance. PM&R physicians (also known as physiatrists) are
-						trained to use physical modalities (stretching, strengthening,
-						heat, cold, etc.) to mechanically enhance healing. They prescribe
-						medications to manage pain, spasticity, nerve injury, and
-						cognitive impairments, while also leveraging the power of physical
-						therapy to increase cardiopulmonary fitness, muscle strength and
-						flexibility.
-					</p>
-					<h3>Our Bodies are Designed to Regenerate and Repair</h3>
-					<p>
-						Inpatient rehab’s prime directive is to get patients back home. To
-						succeed at home, patients need to be able to function as
-						independently as possible, using trained assistants for managing
-						the activities<span> that cannot be performed without help.</span>
-						Admission to a rehab hospital or unit offers the patient home
-						practice opportunities – with simulated challenges that can
-						include everything from terrain parks, test kitchens, medication
-						management trials.
-					</p>
-					<ul>
-						<li>Does the channel reach my intended audience?</li>
-						<li>
-							Is the channel sustainable and affordable within my company’s
-							marketing budget?
-						</li>
-						<li>Will I be able to measure the success of the channel?</li>
-						<li>
-							Do the channels I’m considering work together to convey my
-							message?
-						</li>
-					</ul>
-					<img
-						src="<?php bloginfo('template_directory'); ?>/assets/img/singleblog/blogsingle-doctor2.jpg"
-						alt="blogsingle-doctor2" />
-					<h3>Our Bodies are Designed to Regenerate and Repair</h3>
-					<p>
-						In other cases when care is palliative, learning new skills and
-						being fitted with battery or electric-powered equipment can mean
-						the difference between living at home or in an assisted
-						environment. Some successful cancer patients come to inpatient
-						rehab to practice managing their activities of daily living with
-						varied amounts of assistance, preparing for increased needs as
-						time goes on so they can enjoy being at home for as long as
-						possible.
-					</p>
-					<blockquote>
-						There are no secrets to success. It is the result of preparation,
-						hard work, and learning from failure.
-						<cite>– Paul Tournier</cite>
-					</blockquote>
-					<p>
-						For the physiatrist, cancer is a cause of impairments that can be
-						overcome with creativity and practice, no matter the long-term
-						prognosis. Adaptive equipment, physical exercise, and cognitive
-						retraining may be applied intensively (3 hours a day in the
-						inpatient setting), or at a slower outpatient pace, depending on
-						individual need.
-					</p>
+					<?php echo the_content(); ?>
 					<div>
 						<a>PREVIOUS</a>
 						<a>NEXT</a>
