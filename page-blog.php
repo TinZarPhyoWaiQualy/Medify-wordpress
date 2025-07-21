@@ -325,7 +325,7 @@ get_header();
                                     }
                                 }
                     ?>
-                            <div>
+                            <div class="slider-card-outside">
                                 <div class="slider-card">
                                     <div class="slider-wrapper">
                                         <span class="badge"><?php echo esc_html($badge); ?></span>
@@ -350,11 +350,7 @@ get_header();
                                         <?php elseif (count($images) === 1) : ?>
                                             <div class="blogpost-img"><img src="<?php echo esc_url($images[0]); ?>" alt="<?php the_title_attribute(); ?>" class="wlslider-img" /></div>    
                                         <?php else : ?>
-                                            <?php if (has_post_thumbnail()) : ?>
-                                                <div class="blogpost-img"><?php the_post_thumbnail('full', ['class' => 'wlslider-img']); ?></div>
-                                            <?php else : ?>
-                                                <div class="blogpost-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog2column/dummy.jpg" alt="Default Image" class="wlslider-img" /></div>
-                                            <?php endif; ?>
+                                            <div class="blogpost-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog2column/dummy.jpg" alt="Default Image" class="wlslider-img" /></div>
                                         <?php endif; ?>
                                     </div>
 
@@ -363,10 +359,8 @@ get_header();
                                         <h3 class="post-title"><?php the_title(); ?></h3>
 
                                     </div>
-
-
+                                    <a href="<?php the_permalink(); ?>" class="button-read-more">Read More<img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog2column/readmore.png" alt="ReadMore" class="btn-readmore" /></a>
                                 </div>
-                                <a href="<?php the_permalink(); ?>" class="button-read-more">Read More<img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog2column/readmore.png" alt="ReadMore" class="btn-readmore" /></a>
                             </div>
                     <?php
                             endwhile;
