@@ -4019,7 +4019,12 @@ width: 100%;
     margin-top: 45px;
     border-radius: 5px;
 }
-
+/* .blog-single blockquote p{
+    font-family: "Ubuntu";
+    font-size: 24px;
+    font-weight: 700;
+     max-width: 811px;
+} */
 .blog-single blockquote {
     position: relative;
     font-family: "Ubuntu";
@@ -4075,7 +4080,7 @@ width: 100%;
 }
 
 .blog-single div {
-    display: flex;
+    /* display: flex; */
     justify-content: space-between;
     margin: 36px 40px 0px 0px;
 }
@@ -4094,6 +4099,7 @@ width: 100%;
     background-color: #f7f7f7;
     border-radius: 5px;
     box-shadow: 7px 5px 15px 0px rgba(0, 0, 0, 0.09);
+    display: inline;
 }
 
 .blog-single div:hover {
