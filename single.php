@@ -179,6 +179,7 @@ get_header();
 						<a>PREVIOUS</a>
 						<a>NEXT</a>
 					</div>
+					<!-- <?php echo the_content(); ?> -->
 				</div>
 			</div>
 			<div class="blog-single-sidebar">
