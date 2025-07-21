@@ -578,6 +578,7 @@
         justify-content: unset;
         margin: 0 auto;
         max-width: 660px;
+        padding: 30px 20px 20px;
     }
 
     .top-our-team>*:last-child {
