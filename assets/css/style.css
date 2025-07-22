@@ -4830,20 +4830,20 @@
 }
 
 .contact-textbox, .contact-textarea {
-    font-family: 'Nunito', sans-serif;
-    font-size: 16px;
-    line-height: 1.875;
-    font-weight: 400;
-    color: #3b4964;
-    border: none;
-    border-radius: 5px;
-    background-color: #f6f7fa;
-    padding: 10px 20px;
+    font-family: 'Nunito', sans-serif !important;
+    font-size: 16px !important;
+    line-height: 1.875 !important;
+    font-weight: 400 !important;
+    color: #3b4964 !important;
+    border: none !important;
+    border-radius: 5px !important;
+    background-color: #f6f7fa !important;
+    padding: 10px 20px !important;
 }
 
-.name, .email, .address, .phone {
-    max-width: 360px;
-    width: 100%;
+.name, .email, .address, .phone, .input-text {
+    max-width: 360px !important;
+    width: 100% !important;
 }
 
 .contact-textarea, .website {
@@ -4855,13 +4855,16 @@
     height: 120px;
 }
 
-.contact-textbox.website {
-    margin: 20px 0;
+.contact-textbox-flex p {
+    display: flex;
+    gap: 20px;
+}
+
+.contact-textbox-flex p span {
+    flex: 1;
 }
 
 .contact-textbox-flex {
-    display: flex;
-    gap: 20px;
     margin-bottom: 20px;
 }
 
@@ -4874,20 +4877,20 @@
 }
 
 .contact-btn {
-    max-width: 200px;
-    width: 100%;
-    background-color: #54ced4;
-    border: 1px solid #54ced4;
-    border-radius: 5px;
-    padding: 20px;
-    color: #ffffff;
-    text-align: center;
-    margin-top: 20px;
+    max-width: 200px !important;
+    width: 100% !important;
+    background-color: #54ced4 !important;
+    border: 1px solid #54ced4 !important;
+    border-radius: 5px !important;
+    padding: 20px !important;
+    color: #ffffff !important;
+    text-align: center !important;
+    margin-top: 20px !important;
 }
 
 .contact-btn:hover {
-    background-color: #ffffff;
-    color: #54ced4;
+    background-color: #ffffff !important;
+    color: #54ced4 !important;
 }
 
 .inner-contact-wrapper {
@@ -4939,26 +4942,28 @@
         max-width: 100%;
     }
 
-    .name, .email, .address, .phone {
-        max-width: 50%;
-        width: 100%;
+    .name, .email, .address, .phone, .input-text  {
+        max-width: 415px !important;
+        width: 100% !important;
     }
 
-    .contact-textarea, .website {
+    .contact-textarea{
         max-width: 100%;
         width: 100%;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .contact-textbox-flex {
+    .contact-textbox-flex,
+    .contact-textbox-flex p {
         display: flex;
         flex-direction: column;
         gap: 20px;
     }
 
-    .name, .email, .address, .phone {
-        max-width: 100%;
+    .name, .email, .address, .phone, .input-text  {
+        max-width: 100% !important;
+        
     }
 
     .right-contact {
@@ -4992,8 +4997,8 @@
     }
 
     .contact-btn {
-        max-width: 160px;
-        padding: 20px 10px;
+        max-width: 160px !important;
+        padding: 20px 10px !important;
     }
 }
 
