@@ -17,20 +17,6 @@ get_header();
             </div>
         </div>
     </section>
-<main>
-    <section class="contacts-section">
-        <div class="contacts">
-            <div class="inner-contacts">
-                <h2 class="contacts-h2 history-header">Contacts</h2>
-                <div class="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href=".<?php echo home_url(); ?>/index.html/">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Contacts</li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <section>
         <div class="contact-wrapper">
