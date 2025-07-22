@@ -63,15 +63,15 @@ document.addEventListener("DOMContentLoaded", () => {
   // carea top and history end
 
   // doctor start
-  const message = document.querySelector(".consultancy-right-lower");
-  const toggleButtons = document.querySelectorAll(".doctor-btn, .contact-btn");
+  // const message = document.querySelector(".consultancy-right-lower");
+  // const toggleButtons = document.querySelectorAll(".doctor-btn, .contact-btn");
 
-  toggleButtons.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      message.classList.toggle("show");
-    });
-  });
+  // toggleButtons.forEach((btn) => {
+  //   btn.addEventListener("click", (e) => {
+  //     e.preventDefault();
+  //     message.classList.toggle("show");
+  //   });
+  // });
   // doctor end
 
   //hamburger start
