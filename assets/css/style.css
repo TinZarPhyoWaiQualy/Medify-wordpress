@@ -2626,7 +2626,7 @@
 
 .consultancy-right {
     max-width: calc(100% - 390px);
-    flex: 1;
+    /* flex: 1; */
     font-family: 'Nunito', sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -2638,10 +2638,14 @@
     justify-content: center;
 }
 
-.consultancy-right-upper {
+
+.consultancy-right-upper p {
     display: flex;
     width: 100%;
     gap: 20px;
+}
+.consultancy-right-upper{
+    flex: 1;
 }
 
 .consultancy-right-lower {
@@ -2658,33 +2662,33 @@
 }
 
 .doctor-textbox {
-    padding: 10px 20px;
-    max-width: 300px;
-    width: 100%;
-    height: 52px;
-    border: none;
-    transition: 0.3s;
-    background: #f6f7fa;
-    border-radius: 5px;
+    padding: 10px 20px !important;
+    max-width: 300px !important;
+    width: 100% !important;
+    height: 52px !important;
+    border: none !important;
+    transition: 0.3s !important;
+    background: #f6f7fa !important;
+    border-radius: 5px !important;
 }
 
 .doctor-btn {
-    max-width: 200px;
-    width: 100%;
-    height: 52px;
-    font-family: "Ubuntu", sans-serif;
-    color: #ffffff;
-    font-weight: 700;
-    background: #54ced4;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-align: center;
-    border: 1px solid;
+    max-width: 200px !important;
+    width: 100% !important;
+    height: 52px !important;
+    font-family: "Ubuntu", sans-serif !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    background: #54ced4 !important;
+    padding: 10px 20px !important;
+    border-radius: 5px !important;
+    text-align: center !important;
+    border: 1px solid !important;
 }
 
 .doctor-btn:hover {
-    background-color: #ffffff;
-    color: #54ced4;
+    background-color: #ffffff !important;
+    color: #54ced4 !important;
 }
 
 @media screen and (max-width: 1200px) {
@@ -2823,19 +2827,19 @@
     }
 
     .doctor-textbox {
-        padding: 10px 20px;
-        max-width: 100%;
-        height: 52px;
-        border-radius: 5px;
+        padding: 10px 20px !important;
+        max-width: 100% !important;
+        height: 52px !important;
+        border-radius: 5px !important;
     }
 
     .doctor-btn {
-        max-width: 200px;
-        width: 100%;
-        height: 52px;
-        padding: 10px 20px;
-        border-radius: 5px;
-        text-align: center;
+        max-width: 200px !important;
+        width: 100% !important;
+        height: 52px !important;
+        padding: 10px 20px !important;
+        border-radius: 5px !important;
+        text-align: center !important;
     }
 
     .consultancy-left {
@@ -2871,8 +2875,8 @@
     }
 
     .doctor-btn {
-        max-width: 150px;
-        width: 100%;
+        max-width: 150px !important;
+        width: 100% !important;
     }
 
     .our-team-container {
