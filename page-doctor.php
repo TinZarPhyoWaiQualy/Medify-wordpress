@@ -305,7 +305,12 @@ get_header();
                     </div>
                 </div>
                 <div class="consultancy-right">
-                    <div class="consultancy-right-upper">
+                     <?php
+                        $page = get_page_by_title('doctor');
+                        $content = apply_filters('the_content', $page->post_content);
+                        echo $content;
+                        ?>
+                    <!-- <div class="consultancy-right-upper">
                         <input type="text" placeholder="Your Name *" class="doctor-textbox"
                             onfocus="this.placeholder=''" onblur="this.placeholder='Your Name *'">
                         <input type="text" placeholder="Your Email *" class="doctor-textbox"
@@ -315,7 +320,7 @@ get_header();
                     </div>
                     <div class="consultancy-right-lower">
                         <div>Thank you for your message. It has been sent.</div>
-                    </div>
+                    </div> -->
 
                 </div>
 
