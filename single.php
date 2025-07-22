@@ -63,7 +63,7 @@ get_header();
 						<div class="wlslider slidergp" style="position: relative;">
 							<?php foreach ($images as $img_url) : ?>
 								<div class="imggp">
-									<img src="<?php echo esc_url($img_url); ?>" alt="<?php the_title_attribute(); ?>" />
+									<img class="img-slide" src="<?php echo esc_url($img_url); ?>" alt="<?php the_title_attribute(); ?>" />
 									<button class="custom-prev btn-prev" type="button" aria-label="Previous Slide">
 										<img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog2column/prev-arrow.png" alt="Previous" />
 									</button>
