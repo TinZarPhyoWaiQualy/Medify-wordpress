@@ -1,5 +1,5 @@
 <?php
-/*template name: blog*/
+/*template name: contact*/
 get_header();
 ?>
 
