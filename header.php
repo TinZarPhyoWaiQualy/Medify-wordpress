@@ -59,7 +59,7 @@
 						</div>
 					</div>
 					<a href="<?php echo home_url(); ?>/blog/" id="homeLink" class="sidebar-link">Blog</a>
-					<a href="<?php echo home_url(); ?>/contact/" id="homeLink" class="sidebar-link">Contacts</a>
+					<a href="<?php echo home_url(); ?>/contacts/" id="homeLink" class="sidebar-link">Contacts</a>
 				</nav>
 			</div>
 			<div class="header-wrapper">
