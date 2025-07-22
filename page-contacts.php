@@ -1,5 +1,5 @@
 <?php
-/*template name: contacts*/
+/*template name: contact*/
 get_header();
 ?>
 
@@ -154,4 +154,3 @@ get_header();
 
 <?php
 get_footer();
-
