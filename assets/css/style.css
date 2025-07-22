@@ -3210,7 +3210,8 @@
     align-items: center;
     justify-content: center;
 }
-.blogpost-img.single-img{
+
+.blogpost-img.single-img {
     max-width: 100%;
     height: auto;
 }
@@ -3292,7 +3293,9 @@
     width: 100%;
     max-width: 100%;
 }
-
+.imggp .img-slide {
+       max-width: 100%;
+}
 .custom-prev,
 .custom-next {
     position: absolute;
@@ -3660,11 +3663,13 @@
         margin: 0 auto;
     }
 }
-@media screen and (max-width:544px){
+
+@media screen and (max-width:544px) {
     .custom-next {
         right: 32px;
     }
 }
+
 @media screen and (max-width:511px) {
     .wlslider img {
         max-width: 420px;
@@ -3732,7 +3737,7 @@
         width: 48px;
         height: 39px;
     }
-    
+
 }
 
 @media screen and (max-width:354px) {
@@ -4099,7 +4104,7 @@
     font-size: 24px;
     font-weight: 700;
     color: #0a3380;
-    max-width:811px;
+    max-width: 811px;
     text-align: unset;
 }
 
@@ -4176,13 +4181,16 @@
     color: #ffffff;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
-.blog-single.post-navigation.prev-post a{
-    color:red;
+
+.blog-single.post-navigation.prev-post a {
+    color: red;
 }
+
 .post-navigation {
     display: flex;
     justify-content: space-between;
 }
+
 .post-navigation .prev-post a,
 .post-navigation .next-post a {
     color: #3b4964;
@@ -4190,7 +4198,7 @@
     font-size: 14px;
 }
 
-.prev-post a, .next-post a{
+.prev-post a, .next-post a {
     padding: 10px;
     border-radius: 3px;
     color: #3b4964;
@@ -4253,7 +4261,8 @@
         height: auto;
 
     }
-    .blog-single blockquote p{
+
+    .blog-single blockquote p {
         max-width: 579px;
     }
 }
@@ -4269,7 +4278,7 @@
     }
 
     .blog-single blockquote p {
-        max-width:811px;
+        max-width: 811px;
     }
 
 
@@ -4334,9 +4343,9 @@
         margin: 0 auto;
     }
 
-     .blog-single blockquote p {
+    .blog-single blockquote p {
         max-width: 758px;
-    } 
+    }
 
     .blog-single-doctor img {
         width: 855px;
@@ -4367,7 +4376,8 @@
         width: 755px;
         height: auto;
     }
-    .blog-single blockquote p{
+
+    .blog-single blockquote p {
         max-width: 608px;
     }
 }
@@ -4425,12 +4435,14 @@
         max-width: 510px;
     }
 }
-@media screen and (max-width:656px){
-    .blog-single blockquote p{
+
+@media screen and (max-width:656px) {
+    .blog-single blockquote p {
         max-width: 453px;
         padding-right: 15px;
     }
 }
+
 @media screen and (max-width:635px) {
     .category-list {
         max-width: 465px;
@@ -4767,7 +4779,7 @@
 }
 
 .contacts-section {
-    font-family:'Nunito', sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
 
 .quick-support {
