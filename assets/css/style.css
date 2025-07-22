@@ -4841,7 +4841,7 @@
     padding: 10px 20px;
 }
 
-.name, .email, .address, .phone {
+.name, .email, .address, .phone, .input-text {
     max-width: 360px;
     width: 100%;
 }
@@ -4859,9 +4859,13 @@
     margin: 20px 0;
 }
 
-.contact-textbox-flex {
+.contact-textbox-flex,
+.contact-textbox-flex p {
     display: flex;
     gap: 20px;
+}
+
+.contact-textbox-flex {
     margin-bottom: 20px;
 }
 
@@ -4939,7 +4943,7 @@
         max-width: 100%;
     }
 
-    .name, .email, .address, .phone {
+    .name, .email, .address, .phone, .input-text  {
         max-width: 50%;
         width: 100%;
     }
@@ -4957,7 +4961,7 @@
         gap: 20px;
     }
 
-    .name, .email, .address, .phone {
+    .name, .email, .address, .phone, .input-text  {
         max-width: 100%;
     }
 
