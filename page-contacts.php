@@ -1,5 +1,5 @@
 <?php
-/*template name: contacts*/
+/*template name: contact*/
 get_header();
 ?>
 
@@ -18,50 +18,6 @@ get_header();
         </div>
     </section>
 
-    <section>
-        <div class="contact-wrapper">
-            <div class="inner-contact-wrapper">
-                <div class="left-contact">
-                    <div class="quick-support our-skill">
-                        <span class="our-skill-label">QUICK SUPPORT</span>
-                    </div>
-                    <h3 class="contact-h3 history-header">Contact Us</h3>
-                    <p class="left-contact-p">Private patients, international organizations and corporate businesses
-                        feel safe and softing
-                        establishing relationships.</p>
-                    <div class="contact-icon-wrapper">
-                        <div class="contact-icon-flex">
-                            <div class="contact-icon phone-icon"><img src="<?php bloginfo('template_directory'); ?>/assets/img/contact-us/call.png"
-                                    alt="phone"></div>
-                            <div class="contact-info">
-                                <h3 class="contact-icon-label">CALL US 24/7</h3>
-                                <a href="#" class="contact-address">+8 (123) 456 789 12</a>
-                            </div>
-                        </div>
-                        <div class="contact-icon-flex">
-                            <div class="contact-icon phone-icon"><img src="<?php bloginfo('template_directory'); ?>/assets/img/contact-us/email.png"
-                                    alt="email"></div>
-                            <div class="contact-info">
-                                <h3 class="contact-icon-label">EMAIL ADDRESS</h3>
-                                <a href="#" class="contact-address">medify.clinic@gmail.com</a>
-                            </div>
-                        </div>
-                        <div class="contact-icon-flex">
-                            <div class="contact-icon phone-icon"><img src="<?php bloginfo('template_directory'); ?>/assets/img/contact-us/location.png"
-                                    alt="phone"></div>
-                            <div class="contact-info">
-                                <h3 class="contact-icon-label">OUR LOCATION</h3>
-                                <a href="#" class="contact-address">27 Division St, New York <br>NY 10002, USA</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="right-contact">
-                    <div class="write-us our-skill">
-                        <span class="our-skill-label">WRITE US</span>
-                    </div>
-                    <h3 class="write-us-h3 history-header">Get in Touch</h3>
-                    <!-- <div class="contact-textbox-group">
     <section>
         <div class="contact-wrapper">
             <div class="inner-contact-wrapper">
@@ -154,4 +110,3 @@ get_header();
 
 <?php
 get_footer();
-
