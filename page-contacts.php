@@ -96,7 +96,7 @@ get_header();
 
         <section class="contact-women-section">
             <div class="contact-women">
-                <img src="<?php bloginfo('template_directory'); ?>assets/img/contact-us/women.jpg" alt="women">
+                <img src="<?php bloginfo('template_directory'); ?>/assets/img/contact-us/women.jpg" alt="women">
             </div>
         </section>
     </main>
