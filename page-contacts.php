@@ -31,7 +31,7 @@ get_header();
                             establishing relationships.</p>
                         <div class="contact-icon-wrapper">
                             <div class="contact-icon-flex">
-                                <div class="contact-icon phone-icon"><img src="<?php bloginfo('template_directory'); ?>assets/img/contact-us/call.png"
+                                <div class="contact-icon phone-icon"><img src="<?php bloginfo('template_directory'); ?>/assets/img/contact-us/call.png"
                                         alt="phone"></div>
                                 <div class="contact-info">
                                     <h3 class="contact-icon-label">CALL US 24/7</h3>
@@ -39,7 +39,7 @@ get_header();
                                 </div>
                             </div>
                             <div class="contact-icon-flex">
-                                <div class="contact-icon phone-icon"><img src="<?php bloginfo('template_directory'); ?>assets/img/contact-us/email.png"
+                                <div class="contact-icon phone-icon"><img src="<?php bloginfo('template_directory'); ?>/assets/img/contact-us/email.png"
                                         alt="email"></div>
                                 <div class="contact-info">
                                     <h3 class="contact-icon-label">EMAIL ADDRESS</h3>
@@ -47,7 +47,7 @@ get_header();
                                 </div>
                             </div>
                             <div class="contact-icon-flex">
-                                <div class="contact-icon phone-icon"><img src="<?php bloginfo('template_directory'); ?>assets/img/contact-us/location.png"
+                                <div class="contact-icon phone-icon"><img src="<?php bloginfo('template_directory'); ?>/assets/img/contact-us/location.png"
                                         alt="phone"></div>
                                 <div class="contact-info">
                                     <h3 class="contact-icon-label">OUR LOCATION</h3>
