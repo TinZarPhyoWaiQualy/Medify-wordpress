@@ -62,34 +62,6 @@ get_header();
                         <span class="our-skill-label">WRITE US</span>
                     </div>
                     <h3 class="write-us-h3 history-header">Get in Touch</h3>
-                    <!-- <div class="contact-textbox-group">
-                            <div class="contact-textbox-flex">
-                                <input type="text" placeholder="Your Name *" class="contact-textbox name"
-                                    id="contact-textbox name" onfocus="this.placeholder=''"
-                                    onblur="this.placeholder='Your Name *'">
-                                <input type="text" placeholder="Your Email *" class="contact-textbox email"
-                                    id="contact-textbox email" onfocus="this.placeholder=''"
-                                    onblur="this.placeholder='Your Email *'">
-                            </div>
-
-                            <div class="contact-textbox-flex">
-                                <input type="text" placeholder="Address *" class="contact-textbox address"
-                                    id="contact-textbox address" onfocus="this.placeholder=''"
-                                    onblur="this.placeholder='Address *'">
-                                <input type="text" placeholder="Phone *" class="contact-textbox phone"
-                                    id="contact-textbox phone" onfocus="this.placeholder=''"
-                                    onblur="this.placeholder='Phone *'">
-                            </div>
-                          
-                            <textarea name="" id="" placeholder="Message..." class="contact-textarea"
-                                id="contact-textarea" onfocus="this.placeholder=''"
-                                onblur="this.placeholder='Message... *'"></textarea>
-                            <a href="#" class="contact-btn">Send A Message</a>
-
-                            <div class="consultancy-right-lower">
-                                <div>Thank you for your message. It has been sent.</div>
-                            </div>
-                        </div> -->
                     <div class="contact-textbox-group">
                         <?php
                         $page = get_page_by_title('contact');
