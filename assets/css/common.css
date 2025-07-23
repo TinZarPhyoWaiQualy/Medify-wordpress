@@ -909,20 +909,10 @@ Background Color
   }
 }
 
-/* @media screen and (max-width: 478px) {
-  .access-map {
-    width: 410px;
-  }
-
-  .open-hours {
-    max-width: 410px;
-  }
-} */
-
 @media screen and (max-width: 478px) {
   .access-map {
     width: 395px;
-    padding: 10px 20px 0px 0px;
+    padding: 10px 10px 0px 0px;
   }
 
   .open-hours {
