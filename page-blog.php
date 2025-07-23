@@ -25,305 +25,34 @@ get_header();
     <section class="blog2column-slider-sidebar-wrapper">
         <div class="blog2column-siderbar-wrapper">
             <div>
-                <!-- <div class="slider-card-wrapper">
+                <div class="slider-card-wrapper">
                     <?php
                     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                    $args = array(
+                    $args = [
                         'post_type'      => 'post',
                         'posts_per_page' => 6,
                         'paged'          => $paged,
-                    );
-
+                    ];
                     $blog_query = new WP_Query($args);
 
                     if ($blog_query->have_posts()) :
                         while ($blog_query->have_posts()) : $blog_query->the_post();
+
                             $categories = get_the_category();
-                            $badge = !empty($categories) ? $categories[0]->name : 'NEWS';
-                    ?>
-                            <a href="<?php the_permalink(); ?>">
-                                <div class="slider-card">
-                                    <div class="slider-wrapper">
-                                        <span class="badge"><?php echo esc_html($badge); ?></span>
-                                        <div class="wlslider">
-                                            <div>
-                                                <?php if (has_post_thumbnail()) : ?>
-                                                    <?php the_post_thumbnail('full'); ?>
-                                                <?php else : ?>
-                                                    <img src="<?php bloginfo('template_directory'); ?>/assets/img/default.jpg" alt="Default Image">
-                                                <?php endif; ?>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="post-info">
-                                        <span class="post-date"><?php echo get_the_date('F j, Y'); ?></span>
-                                        <h3 class="post-title"><?php the_title(); ?></h3>
-                                    </div>
-                                </div>
-                            </a>
-                        <?php
-                        endwhile;
-                        ?>
-                </div> -->
+                            $badge = !empty($categories) ? $categories[0]->name : 'VACINATION';
 
-                <!-- <div class="slider-card-wrapper">
-                    <?php
-                        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                        $args = array(
-                            'post_type'      => 'post',
-                            'posts_per_page' => 6,
-                            'paged'          => $paged,
-                        );
+                            $raw_images = SCF::get('blog_slider_img', get_the_ID());
+                            $images = [];
 
-                        $blog_query = new WP_Query($args);
-
-                        if ($blog_query->have_posts()) :
-                            while ($blog_query->have_posts()) : $blog_query->the_post();
-
-                                $categories = get_the_category();
-                                $badge = !empty($categories) ? $categories[0]->name : 'NEWS';
-
-
-                                $raw_images = SCF::get('blog_slider_img', get_the_ID());
-                                $images = [];
-
-                                if (is_array($raw_images)) {
-                                    foreach ($raw_images as $img) {
-                                        if (is_numeric($img)) {
-                                            $images[] = esc_url(wp_get_attachment_url($img));
-                                        }
+                            if (is_array($raw_images)) {
+                                foreach ($raw_images as $img) {
+                                    if (is_numeric($img)) {
+                                        $images[] = esc_url(wp_get_attachment_url($img));
+                                    } elseif (is_array($img) && isset($img['url'])) {
+                                        $images[] = esc_url($img['url']);
                                     }
                                 }
-                    ?>
-
-                            <?php if (!empty($images)) : ?>
-                                <div class="my-slider">
-                                    <?php foreach ($images as $img_url) : ?>
-                                        <div class="slide">
-                                            <img src="<?php echo $img_url; ?>" class="wlslider-img" alt="Slide Image">
-                                        </div>
-                                    <?php endforeach; ?>
-                                </div>
-                            <?php endif; ?>
-
-
-
-
-                            <a href="<?php the_permalink(); ?>">
-                                <div class="slider-card">
-                                    <div class="slider-wrapper">
-                                        <span class="badge"><?php echo esc_html($badge); ?></span>
-
-                                        <?php if (count($images) >= 2) : ?>
-                                            <div class="wlslider">
-                                                <?php foreach ($images as $img_url) : ?>
-                                                    <div>
-                                                        <img src="<?php echo esc_url($img_url); ?>" alt="<?php the_title_attribute(); ?>" />
-                                                    </div>
-                                                <?php endforeach; ?>
-                                            </div>
-                                        <?php elseif (count($images) === 1) : ?>
-                                            <img src="<?php echo esc_url($images[0]); ?>" alt="<?php the_title_attribute(); ?>" class="choose-blog" />
-                                        <?php else : ?>
-                                            <div>
-                                                <?php if (has_post_thumbnail()) : ?>
-                                                    <?php the_post_thumbnail('full', ['class' => 'wlslider-img']); ?>
-                                                <?php else : ?>
-                                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/default.jpg" alt="Default Image">
-                                                <?php endif; ?>
-                                            </div>
-                                        <?php endif; ?>
-                                    </div>
-
-                                    <div class="post-info">
-                                        <span class="post-date"><?php echo get_the_date('F j, Y'); ?></span>
-                                        <h3 class="post-title"><?php the_title(); ?></h3>
-                                    </div>
-                                </div>
-                            </a>
-
-                    <?php
-                            endwhile;
-                        endif;
-                        wp_reset_postdata();
-                    ?>
-                </div> -->
-
-                <!-- <div class="slider-card-wrapper">
-                    <?php
-                        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                        $args = array(
-                            'post_type'      => 'post',
-                            'posts_per_page' => 6,
-                            'paged'          => $paged,
-                        );
-
-                        $blog_query = new WP_Query($args);
-
-                        if ($blog_query->have_posts()) :
-                            while ($blog_query->have_posts()) : $blog_query->the_post();
-
-                                $categories = get_the_category();
-                                $badge = !empty($categories) ? $categories[0]->name : 'NEWS';
-
-                                // Get SCF images (attachment IDs)
-                                $raw_images = SCF::get('blog_slider_img', get_the_ID());
-                                $images = [];
-
-                                if (is_array($raw_images)) {
-                                    foreach ($raw_images as $img) {
-                                        if (is_numeric($img)) {
-                                            $images[] = esc_url(wp_get_attachment_url($img));
-                                        }
-                                    }
-                                }
-                    ?>
-
-                            <a href="<?php the_permalink(); ?>">
-                                <div class="slider-card">
-                                    <div class="slider-wrapper">
-                                        <span class="badge"><?php echo esc_html($badge); ?></span>
-
-                                        <?php if (count($images) >= 2) : ?>
-                                            <div class="wlslider">
-                                                <?php foreach ($images as $img_url) : ?>
-                                                    <div>
-                                                        <img src="<?php echo esc_url($img_url); ?>" alt="<?php the_title_attribute(); ?>" class="wlslider-img" />
-                                                    </div>
-                                                <?php endforeach; ?>
-                                            </div>
-                                        <?php elseif (count($images) === 1) : ?>
-                                            <img src="<?php echo esc_url($images[0]); ?>" alt="<?php the_title_attribute(); ?>" class="wlslider-img" />
-                                        <?php else : ?>
-                                            <?php if (has_post_thumbnail()) : ?>
-                                                <?php the_post_thumbnail('full', ['class' => 'wlslider-img']); ?>
-                                            <?php else : ?>
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/default.jpg" alt="Default Image" class="wlslider-img" />
-                                            <?php endif; ?>
-                                        <?php endif; ?>
-                                    </div>
-
-                                    <div class="post-info">
-                                        <span class="post-date"><?php echo get_the_date('F j, Y'); ?></span>
-                                        <h3 class="post-title"><?php the_title(); ?></h3>
-                                    </div>
-                                </div>
-                            </a>
-
-                    <?php
-                            endwhile;
-                        endif;
-                        wp_reset_postdata();
-                    ?>
-                </div> -->
-
-                <!-- <div class="slider-card-wrapper">
-                    <?php
-                        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                        $args = array(
-                            'post_type'      => 'post',
-                            'posts_per_page' => 6,
-                            'paged'          => $paged,
-                        );
-
-                        $blog_query = new WP_Query($args);
-
-                        if ($blog_query->have_posts()) :
-                            while ($blog_query->have_posts()) : $blog_query->the_post();
-
-                                $categories = get_the_category();
-                                $badge = !empty($categories) ? $categories[0]->name : 'NEWS';
-
-                                // SCF image field (assumes repeatable image field returning attachment IDs)
-                                $raw_images = SCF::get('blog_slider_img', get_the_ID());
-                                $images = [];
-
-                                if (is_array($raw_images)) {
-                                    foreach ($raw_images as $img) {
-                                        if (is_numeric($img)) {
-                                            $images[] = esc_url(wp_get_attachment_url($img));
-                                        } elseif (is_array($img) && isset($img['url'])) {
-                                            $images[] = esc_url($img['url']);
-                                        }
-                                    }
-                                }
-
-                    ?>
-
-                            <a href="<?php the_permalink(); ?>">
-                                <div class="slider-card">
-                                    <div class="slider-wrapper">
-                                        <span class="badge"><?php echo esc_html($badge); ?></span>
-
-                                        <?php if (count($images) >= 2) : ?>
-                                            <div class="wlslider">
-                                                <?php foreach ($images as $img_url) : ?>
-                                                    <div>
-                                                        <img src="<?php echo esc_url($img_url); ?>" alt="<?php the_title_attribute(); ?>" class="wlslider-img" />
-                                                    </div>
-                                                <?php endforeach; ?>
-                                                 <button class="custom-prev" type="button" aria-label="Previous Slide">
-                                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog2column/prev-arrow.png" />
-                                                </button>
-                                                <button class="custom-next" type="button" aria-label="Next Slide">
-                                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog2column/next-arrow.png" />
-                                                </button>
-                                            </div>
-                                        <?php elseif (count($images) === 1) : ?>
-                                            <img src="<?php echo esc_url($images[0]); ?>" alt="<?php the_title_attribute(); ?>" class="wlslider-img" />
-                                        <?php else : ?>
-                                            <?php if (has_post_thumbnail()) : ?>
-                                                <?php the_post_thumbnail('full', ['class' => 'wlslider-img']); ?>
-                                            <?php else : ?>
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/default.jpg" alt="Default Image" class="wlslider-img" />
-                                            <?php endif; ?>
-                                        <?php endif; ?>
-                                    </div>
-
-                                    <div class="post-info">
-                                        <span class="post-date"><?php echo get_the_date('F j, Y'); ?></span>
-                                        <h3 class="post-title"><?php the_title(); ?></h3>
-                                    </div>
-                                </div>
-                            </a>
-
-                    <?php
-                            endwhile;
-                        endif;
-                        wp_reset_postdata();
-                    ?>
-                </div> -->
-
-
-
-                <div class="slider-card-wrapper">
-                    <?php
-                        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                        $args = [
-                            'post_type'      => 'post',
-                            'posts_per_page' => 6,
-                            'paged'          => $paged,
-                        ];
-                        $blog_query = new WP_Query($args);
-
-                        if ($blog_query->have_posts()) :
-                            while ($blog_query->have_posts()) : $blog_query->the_post();
-
-                                $categories = get_the_category();
-                                $badge = !empty($categories) ? $categories[0]->name : 'VACINATION';
-
-                                $raw_images = SCF::get('blog_slider_img', get_the_ID());
-                                $images = [];
-
-                                if (is_array($raw_images)) {
-                                    foreach ($raw_images as $img) {
-                                        if (is_numeric($img)) {
-                                            $images[] = esc_url(wp_get_attachment_url($img));
-                                        } elseif (is_array($img) && isset($img['url'])) {
-                                            $images[] = esc_url($img['url']);
-                                     }
-                                    }
-                                }
+                            }
                     ?>
                             <div class="slider-card-outside">
                                 <div class="slider-card">
@@ -348,7 +77,7 @@ get_header();
                                                 <?php endforeach; ?>
                                             </div>
                                         <?php elseif (count($images) === 1) : ?>
-                                            <div class="blogpost-img"><img src="<?php echo esc_url($images[0]); ?>" alt="<?php the_title_attribute(); ?>" class="wlslider-img" /></div>    
+                                            <div class="blogpost-img"><img src="<?php echo esc_url($images[0]); ?>" alt="<?php the_title_attribute(); ?>" class="wlslider-img" /></div>
                                         <?php else : ?>
                                             <div class="blogpost-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog2column/dummy.jpg" alt="Default Image" class="wlslider-img" /></div>
                                         <?php endif; ?>
@@ -363,20 +92,17 @@ get_header();
                                 </div>
                             </div>
                     <?php
-                            endwhile;
-                        endif;
-                        wp_reset_postdata();
+                        endwhile;
+                    endif;
+                    wp_reset_postdata();
                     ?>
                 </div>
-
-
-
 
                 <div class="pagination">
                     <?php wp_pagenavi(array('query' => $blog_query)); ?>
                 </div>
                 <?php wp_reset_postdata(); ?>
-            <?php endif; ?>
+
             </div>
 
             <div class="blog-single-sidebar">
