@@ -2818,9 +2818,11 @@
     .consultancy-right-upper p {
         display: block;
     }
-     .wpcf7 form .wpcf7-response-output{
+
+    .wpcf7 form .wpcf7-response-output {
         margin: 10px 0 0 0 !important;
-     }
+    }
+
     .inner-consultancy-right {
         display: block;
     }
@@ -4946,12 +4948,10 @@
     }
 
     .name, .email, .address, .phone, .input-text {
-    .name, .email, .address, .phone, .input-text {
         max-width: 415px !important;
         width: 100% !important;
     }
 
-    .contact-textarea {
     .contact-textarea {
         max-width: 100%;
         width: 100%;
@@ -4969,9 +4969,7 @@
     }
 
     .name, .email, .address, .phone, .input-text {
-    .name, .email, .address, .phone, .input-text {
         max-width: 100% !important;
-
 
     }
 
