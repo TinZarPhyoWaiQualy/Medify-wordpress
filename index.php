@@ -157,15 +157,14 @@ get_header();
           Professional Medical Care in Full Measure
         </h3>
         <p class="about-me-p first">
-          For us, there are no minor aspects, because a quality result
+          For us, there are no minor aspects, because a result
           always depends on trifles. Over the years of our activities, we
           have gained the unique experience of organizing medical services
           for citizens and foreign nationals.
         </p>
-        <p class="about-me-p second">
-          Private patients, international organizations and corporate
-          businesses feel safe and comfortable in establishing
-          relationships.
+        <p class="about-me-p second">          
+          Private and international organizations and corporate
+          businesses comfortable in establishing relationships.
         </p>
       </div>
     </div>
@@ -250,7 +249,7 @@ get_header();
             </div>
             <div class="lower-carea-text">
               <div class="lower-carea-panel active" id="quality">
-                <p>The major goal of family medicine is to build trust between the patient and the
+                <p>The major goal of family medicine is to build trust between the patient and the doctor and the
                   general practitioner, which allows achieving the best treatment outcome.</p>
                 <p>The specific features of work of the general practitioner (family doctor) are more
                   reasonable and beneficial to both GPs and patients in many respects.</p>
@@ -328,96 +327,7 @@ get_header();
       </div>
     </div>
 
-    <!-- <div class="top-our-team">
 
-      <?php
-      $args = array(
-        'post_type'      => 'post',
-        'posts_per_page' => 3, // Number of posts to show
-      );
-
-      $blog_query = new WP_Query($args);
-
-      if ($blog_query->have_posts()) :
-        while ($blog_query->have_posts()) : $blog_query->the_post();
-          $categories = get_the_category();
-          $badge = !empty($categories) ? $categories[0]->name : 'NEWS';
-      ?>
-         
-            <div class="slider-ourteam-card">
-              <div class="slider-wrapper">
-                <span class="badge"><?php echo esc_html($badge); ?></span>
-                <div class="top-wlslider">
-                  <div>
-                    <?php if (has_post_thumbnail()) : ?>
-                      <?php the_post_thumbnail('full'); ?>
-                    <?php else : ?>
-                      <img src="<?php bloginfo('template_directory'); ?>/assets/img/default.jpg" alt="Default Image">
-                    <?php endif; ?>
-                  </div>
-                </div>
-              </div>
-              <div class="post-info">
-                <span class="post-date"><?php echo get_the_date('F j, Y'); ?></span>
-                <h3 class="post-title">
-                  <?php the_title(); ?>
-                </h3>
-              </div>
-            </div>
-      <?php
-        endwhile;
-        wp_reset_postdata();
-      endif;
-      ?>
-
-    </div> -->
-<!-- 
-    <div class="top-our-team">
-      <?php
-        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-        $args = [
-          'post_type'      => 'post',
-          'posts_per_page' => 3,
-          'paged'          => $paged,
-      ];
-
-      $blog_query = new WP_Query($args);
-
-      if ($blog_query->have_posts()) :
-        while ($blog_query->have_posts()) : $blog_query->the_post();
-          $categories = get_the_category();
-          $badge = !empty($categories) ? $categories[0]->name : 'VACINATION';
-      ?>
-          <div class="slider-ourteam-card">
-            <div class="slider-wrapper">
-              <span class="badge"><?php echo esc_html($badge); ?></span>
-              <div class="top-wlslider">
-                <div>
-                  <?php if (has_post_thumbnail()) : ?>
-                    <?php the_post_thumbnail('full'); ?>
-                  <?php else : ?>
-                    <img src="<?php bloginfo('template_directory'); ?>/assets/img/default.jpg" alt="Default Image">
-                  <?php endif; ?>
-                </div>
-              </div>
-            </div>
-
-            <div class="post-info">
-              <span class="post-date"><?php echo get_the_date('F j, Y'); ?></span>
-              <h3 class="post-title"><?php the_title(); ?></h3>
-
-              <a href="<?php the_permalink(); ?>" class="button-read-more latest">
-                Read More
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog2column/readmore.png" alt="ReadMore" class="btn-readmore" />
-              </a>
-            </div>
-          </div>
-      <?php
-        endwhile;
-        wp_reset_postdata();
-      endif;
-      ?>
-    </div> -->
 
 <div class="top-our-team">
     <?php

@@ -279,6 +279,7 @@
     font-weight: 400;
     color: #3b4964;
     line-height: 1.7;
+    text-align: justify;
 }
 
 .about-me-p.first {
@@ -578,7 +579,7 @@
         justify-content: unset;
         margin: 0 auto;
         max-width: 660px;
-        padding: 30px 20px 20px;
+        padding: 30px 10px 20px;
     }
 
     .top-our-team>*:last-child {
@@ -1197,7 +1198,7 @@
 
 @media screen and (max-width:510px) {
     .our-team-stuff-container {
-        padding: 60px 20px 38px 20px;
+        padding: 60px 20px 50px 20px;
     }
 }
 
@@ -1742,14 +1743,6 @@
         padding: 0;
     }
 
-    /* 
-    .care-a-wrapper {
-        display: flex;
-        max-width: 1320px;
-        padding: 0 20px;
-        margin: 50px auto;
-    } */
-
     .care-a-content {
         max-width: 100%;
     }
@@ -1765,7 +1758,7 @@
     .care-a-wrapper {
         display: flex;
         max-width: 600px;
-        padding: 0 20px;
+        padding: 0 20px 20px 20px;
         margin: 50px auto;
     }
 
@@ -1819,7 +1812,7 @@
 
 @media screen and (max-width: 525px) {
     .mission-ul li:first-child::before {
-        margin-top: -33px;
+        margin-top: -35px;
     }
 
     .year {
@@ -2162,7 +2155,7 @@
 .pricing-btn {
     width: 100%;
     padding: 17px 30px;
-    color: #ffffff;
+    color: #ffffff !important;
     background-color: #2ea6f7;
     border-radius: 7px 7px 0px 0px;
     display: inline-block;
@@ -2203,7 +2196,7 @@
 
 .pricing-btn.blue {
     background-color: #ffffff;
-    color: #2ea6f7;
+    color: #2ea6f7 !important;
 }
 
 .pricing-header.blue::after {
@@ -2240,7 +2233,7 @@
 }
 
 .pricing_footer:hover .pricing-btn.blue {
-    color: #ffffff;
+    color: #ffffff !important;
 }
 
 @media screen and (max-width: 1025px) {
@@ -2271,7 +2264,7 @@
     .pricing {
         margin: 0 auto;
         background-color: #f9f9f9;
-        padding: 80px 20px 35px 20px;
+        padding: 80px 20px 60px 20px;
     }
 
     .service-icon-wrapper {
@@ -2594,7 +2587,7 @@
 .consultancy-section {
     max-width: 1320px;
     padding: 0 20px 0px 20px;
-    margin: -80px auto 40px auto;
+    margin: -80px auto 80px auto;
 }
 
 .consultancy {
@@ -2862,7 +2855,7 @@
     }
 
     .consultancy-section {
-        margin: -90px auto 0 auto;
+        margin: -90px auto 90px auto;
     }
 
     .consultancy {
@@ -4795,6 +4788,7 @@
     padding-top: 10px;
     line-height: 1.8;
     opacity: 0.9;
+    text-align: justify;
 }
 
 .contact-icon-flex {
@@ -4826,7 +4820,7 @@
 .contact-address {
     font-family: 'Nunito', sans-serif;
     font-size: 16px;
-    color: #3b4964;
+    color: #3b4964 !important;
     font-weight: 400;
 }
 
@@ -4986,7 +4980,7 @@
     }
 
     .contact-women {
-        padding: 0 20px 50px 20px;
+        padding: 0 20px 80px 20px;
     }
 
     .inner-contact-wrapper {

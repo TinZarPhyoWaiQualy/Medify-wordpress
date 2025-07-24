@@ -26,9 +26,10 @@ get_header();
                         <span class="our-skill-label">QUICK SUPPORT</span>
                     </div>
                     <h3 class="contact-h3 history-header">Contact Us</h3>
-                    <p class="left-contact-p">Private patients, international organizations and corporate businesses
-                        feel safe and softing
-                        establishing relationships.</p>
+                    <p class="left-contact-p">
+                        Private and international organizations and corporate
+                        businesses comfortable in establishing relationships.
+                    </p>
                     <div class="contact-icon-wrapper">
                         <div class="contact-icon-flex">
                             <div class="contact-icon phone-icon"><img src="<?php bloginfo('template_directory'); ?>/assets/img/contact-us/call.png"
