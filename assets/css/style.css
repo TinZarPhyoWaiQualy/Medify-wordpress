@@ -3122,7 +3122,7 @@
 @media screen and (max-width:908px) {
     .faq-second-section {
         flex-direction: column;
-        gap: 20px;
+        gap: 1px;
     }
 
     .faq-intro {
@@ -3165,6 +3165,16 @@
 
     .support-center-card {
         padding-bottom: 1px;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .faq-question-answwer-cover {
+        padding: 0;
+    }
+
+    .paragraph {
+        text-align: justify;
     }
 }
 
@@ -3726,6 +3736,11 @@
     .slider-card {
         max-width: 320px;
     }
+    
+    .custom-prev, .custom-next {
+        width: 48px;
+        height: 39px;
+    }
 }
 
 @media screen and (max-width:359px) {
@@ -3743,11 +3758,6 @@
 
     .slider-card-wrapper {
         gap: 20px 0;
-    }
-
-    .custom-prev, .custom-next {
-        width: 48px;
-        height: 39px;
     }
 
 }
@@ -4040,7 +4050,7 @@
     font-weight: 700;
     margin-top: 38px;
     margin-bottom: 30px;
-    line-height: 1.8;
+    line-height: 1.5;
 }
 
 .blog-single span {
