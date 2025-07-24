@@ -78,6 +78,7 @@ get_header();
                                             </div>
                                         <?php elseif (count($images) === 1) : ?>
                                             <div class="blogpost-img"><img src="<?php echo esc_url($images[0]); ?>" alt="<?php the_title_attribute(); ?>" class="wlslider-img" /></div>
+                                            <div class="blogpost-img"><img src="<?php echo esc_url($images[0]); ?>" alt="<?php the_title_attribute(); ?>" class="wlslider-img" /></div>
                                         <?php else : ?>
                                             <div class="blogpost-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog2column/dummy.jpg" alt="Default Image" class="wlslider-img" /></div>
                                         <?php endif; ?>
