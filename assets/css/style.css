@@ -3959,11 +3959,11 @@
     font-family: 'Nunito', sans-serif;
     font-size: 14px;
     font-weight: 800;
-    color: #aeb6c2;
+    color: #aeb6c2 !important;
 }
 
 .bydeveloper:hover {
-    color: #2ea6f7;
+    color: #2ea6f7 !important;
 }
 
 .blog-single-date {
