@@ -787,6 +787,12 @@
     }
 }
 
+@media screen and (max-width:376px) {
+    .top-our-team {
+        padding: 30px 10px 20px;
+    }
+}
+
 /* top our team sp */
 @media screen and (max-width:372px) {
     .slider-ourteam-card {
@@ -3743,7 +3749,7 @@
     .slider-card {
         max-width: 320px;
     }
-    
+
     .custom-prev, .custom-next {
         width: 48px;
         height: 39px;
